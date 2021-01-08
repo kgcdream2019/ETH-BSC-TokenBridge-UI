@@ -1,0 +1,28 @@
+type UserRequest @entity {
+  id: ID!
+  user: Bytes!
+  timestamp: BigInt!
+  txHash: String!
+}
+
+type BridgeTransfer @entity {
+  id: ID!
+  token: Bytes!
+  recipient: Bytes!
+  value: BigInt!
+  messageId: Bytes!
+  timestamp: BigInt!
+  txHash: String!
+}
+
+type Token @entity {
+  id: ID!
+  homeAddress: Bytes!
+  homeName: String!
+  homeChainId: Int!
+  decimals: Int!
+  symbol: String!
+  foreignAddress: Bytes!
+  foreignName: String!
+  foreignChainId: Int!
+}
