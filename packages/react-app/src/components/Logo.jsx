@@ -4,7 +4,7 @@ import React, { useContext, useState } from 'react';
 import EthLogo from '../assets/eth-logo.png';
 import xDAILogo from '../assets/xdai-logo.png';
 import { Web3Context } from '../contexts/Web3Context';
-import { isxDaiChain, uriToHttp } from '../lib/helpers';
+import { isHomeChain, uriToHttp } from '../lib/helpers';
 
 const BAD_SRCS = {};
 
@@ -14,8 +14,8 @@ const BAD_SRCS = {};
 export const Logo = ({ uri, reverseFallback = false }) => {
   const { network } = useContext(Web3Context);
   const fallbackCheck = reverseFallback
-    ? !isxDaiChain(network.value)
-    : isxDaiChain(network.value);
+    ? !isHomeChain(network.value)
+    : isHomeChain(network.value);
   const fallbackLogo = fallbackCheck ? xDAILogo : EthLogo;
   const [, refresh] = useState(0);
 

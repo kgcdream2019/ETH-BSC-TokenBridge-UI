@@ -1,6 +1,6 @@
 import { Contract, utils } from 'ethers';
 
-import { getAMBAddress, getBridgeNetwork, isxDaiChain } from './helpers';
+import { getAMBAddress, getBridgeNetwork, isHomeChain } from './helpers';
 import { getEthersProvider } from './providers';
 
 export const fetchConfirmations = async (chainId, walletProvider) => {
@@ -32,7 +32,7 @@ export const getMessageId = (txReceipt, bridgeAddress, eventAbi) => {
 };
 
 export const getMessageFromReceipt = (chainId, txReceipt) => {
-  const isxDai = isxDaiChain(chainId);
+  const isxDai = isHomeChain(chainId);
   const bridgeAddress = getAMBAddress(chainId);
   const eventAbi = isxDai
     ? 'event UserRequestForSignature(bytes32 indexed messageId, bytes encodedData)'

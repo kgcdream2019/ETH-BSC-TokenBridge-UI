@@ -7,17 +7,17 @@ export const ADDRESS_ZERO = '0x0000000000000000000000000000000000000000';
 
 export const networkOptions = [
   {
-    value: 100,
+    value: 56,
     key: 0,
     bridge: { chainId: 1, name: 'ETH Mainnet' },
-    label: 'xDai',
-    name: 'xDai Chain',
+    label: 'bsc',
+    name: 'BSC Mainnet',
     icon: <NetworkIcon />,
   },
   {
     value: 1,
     key: 1,
-    bridge: { chainId: 100, name: 'xDai Chain' },
+    bridge: { chainId: 56, name: 'BSC Mainnet' },
     label: 'Mainnet',
     name: 'ETH Mainnet',
     icon: <NetworkIcon />,
@@ -38,14 +38,7 @@ export const networkOptions = [
   //   name: 'Kovan Testnet',
   //   icon: <NetworkIcon />,
   // },
-  {
-    value: 56,
-    key: 0,
-    bridge: { chainId: 1, name: 'ETH Mainnet' },
-    label: 'bsc',
-    name: 'BSC Mainnet',
-    icon: <NetworkIcon />,
-  },
+
 ];
 
 export const networkNames = {

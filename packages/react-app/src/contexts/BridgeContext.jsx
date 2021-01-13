@@ -12,7 +12,7 @@ import {
   defaultMaxPerTx,
   defaultMinPerTx,
   getDefaultToken,
-  isxDaiChain,
+  isHomeChain,
   uniqueTokens,
 } from '../lib/helpers';
 import {
@@ -50,7 +50,7 @@ export const BridgeProvider = ({ children }) => {
       setFromAmount(amount);
       const gotToAmount = await fetchToAmount(fromToken, toToken, amount);
       setToAmount(gotToAmount);
-      if (isxDaiChain(fromToken.chainId)) {
+      if (isHomeChain(fromToken.chainId)) {
         setAllowed(true);
       } else {
         const gotAllowance = await fetchAllowance(
@@ -70,7 +70,7 @@ export const BridgeProvider = ({ children }) => {
       setLoading(true);
       setFromToken(token);
       setTokenLimits({
-        minPerTx: defaultMinPerTx(isxDaiChain(token.chainId), token.decimals),
+        minPerTx: defaultMinPerTx(isHomeChain(token.chainId), token.decimals),
         maxPerTx: defaultMaxPerTx(token.decimals),
         dailyLimit: defaultDailyLimit(token.decimals),
       });

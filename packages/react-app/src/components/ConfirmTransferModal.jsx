@@ -17,7 +17,7 @@ import React, { useContext, useEffect, useState } from 'react';
 
 import TransferImage from '../assets/confirm-transfer.svg';
 import { BridgeContext } from '../contexts/BridgeContext';
-import { formatValue, isxDaiChain } from '../lib/helpers';
+import { formatValue, isHomeChain } from '../lib/helpers';
 import { DaiWarning, isERC20DaiAddress } from './DaiWarning';
 
 export const ConfirmTransferModal = ({ isOpen, onClose }) => {
@@ -30,7 +30,7 @@ export const ConfirmTransferModal = ({ isOpen, onClose }) => {
       ((Number(fromAmount) - Number(toAmount)) * 100) / Number(fromAmount),
     );
   }, [fromAmount, toAmount]);
-  const isxDai = isxDaiChain(fromToken.chainId);
+  const isxDai = isHomeChain(fromToken.chainId);
   const fromAmt = formatValue(fromAmount, fromToken.decimals);
   const fromUnit = fromToken.symbol + (isxDai ? ' on xDai' : '');
   const toAmt = formatValue(toAmount, toToken.decimals);
