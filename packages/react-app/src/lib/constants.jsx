@@ -38,6 +38,14 @@ export const networkOptions = [
   //   name: 'Kovan Testnet',
   //   icon: <NetworkIcon />,
   // },
+  {
+    value: 56,
+    key: 0,
+    bridge: { chainId: 1, name: 'ETH Mainnet' },
+    label: 'bsc',
+    name: 'BSC Mainnet',
+    icon: <NetworkIcon />,
+  },
 ];
 
 export const networkNames = {
@@ -45,6 +53,8 @@ export const networkNames = {
   1: 'ETH Mainnet',
   77: 'Sokol Testnet',
   42: 'Kovan Testnet',
+  56: 'BSC Mainnet',
+
 };
 
 export const chainUrls = {
@@ -71,6 +81,12 @@ export const chainUrls = {
     explorer: 'https://kovan.etherscan.io',
     chainId: 42,
     name: 'Kovan Testnet',
+  },
+  56: {
+    rpc: 'https://bsc-dataseed.binance.org',
+    explorer: 'https://bscscan.com',
+    chainId: 56,
+    name: 'BSC Mainnet',
   },
 };
 
@@ -105,6 +121,13 @@ export const defaultTokens = {
     decimals: 18,
     chainId: 42,
   },
+  56: {
+    name: 'Stake on BSC',
+    address: '0xb3d1b98e604fee95cfa7bb7b8ef6680dac8fbc53',
+    symbol: 'STAKE',
+    decimals: 18,
+    chainId: 56,
+  },
 };
 
 export const graphEndpoints = {
@@ -112,20 +135,24 @@ export const graphEndpoints = {
   1: 'https://api.thegraph.com/subgraphs/name/dan13ram/mainnet-omnibridge',
   77: 'https://api.thegraph.com/subgraphs/name/dan13ram/sokol-omnibridge',
   42: 'https://api.thegraph.com/subgraphs/name/dan13ram/kovan-omnibridge',
+  56: 'https://api.thegraph.com/subgraphs/name/dan13ram/kovan-omnibridge',
 };
 
 export const mediators = {
   42: '0xA960d095470f7509955d5402e36d9DB984B5C8E2',
   77: '0x40CdfF886715A4012fAD0219D15C98bB149AeF0e',
-  1: '0x88ad09518695c6c3712AC10a214bE5109a655671',
+  1: '0xF652B3BbA068b4611616FE627c96562938529305',
   100: '0xf6A78083ca3e2a662D6dd1703c939c8aCE2e268d',
+  56: '0x0694569C3bD531B4320AC70117E9133f9439D4Fa',
 };
 
 export const ambs = {
   42: '0xFe446bEF1DbF7AFE24E81e05BC8B271C1BA9a560',
   77: '0xFe446bEF1DbF7AFE24E81e05BC8B271C1BA9a560',
-  1: '0x4C36d2919e407f0Cc2Ee3c993ccF8ac26d9CE64e',
+  1: '0xb733Eb1fd233956CC689a6c082D4D0a47e3975E1',
   100: '0x75Df5AF045d91108662D8080fD1FEFAd6aA0bb59',
+  56: '0xB066E69BD0AB1bBEf358A117C570D6D80C7DCfc7',
+  
 };
 
 export const defaultTokensUrl = {
@@ -133,4 +160,5 @@ export const defaultTokensUrl = {
   1: 'https://tokens.uniswap.org',
   42: '',
   77: '',
+  56: 'https://tokens.honeyswap.org',
 };

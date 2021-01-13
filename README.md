@@ -1,6 +1,6 @@
 # xDAI omnibridge
 
-The [multi-token extension](https://docs.tokenbridge.net/eth-xdai-amb-bridge/multi-token-extension) for the Arbitrary Message Bridge between Ethereum and the xDai chain is the simplest way to transfer ANY ERC20/ERC677/ERC827 token to the xDai chain.
+The multi-token extension for the Arbitrary Message Bridge between Ethereum and the binance smart chain is the simplest way to transfer ANY ERC20/ERC677/ERC827 token to the binance smart chain.
 
 ## Project Structure
 
@@ -9,7 +9,7 @@ This project is a monorepo created with [Yarn Workspaces](https://classic.yarnpk
 [comment]: # 'git ls-tree -r --name-only HEAD | tree --fromfile'
 
 ```
-xdai-omnibridge
+bsc-omnibridge
 ├── .eslintrc.json
 ├── .firebaserc
 ├── .github
