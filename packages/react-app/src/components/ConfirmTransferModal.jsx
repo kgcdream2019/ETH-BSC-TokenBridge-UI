@@ -12,13 +12,13 @@ import {
   ModalOverlay,
   Text,
   useBreakpointValue,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 import React, { useContext, useEffect, useState } from 'react';
 
 import TransferImage from '../assets/confirm-transfer.svg';
 import { BridgeContext } from '../contexts/BridgeContext';
-import { formatValue, isHomeChain } from '../lib/helpers';
-import { DaiWarning, isERC20DaiAddress } from './DaiWarning';
+import { formatValue, isxDaiChain } from '../lib/helpers';
+// import { DaiWarning, isERC20DaiAddress } from './DaiWarning';
 
 export const ConfirmTransferModal = ({ isOpen, onClose }) => {
   const { fromToken, toToken, fromAmount, toAmount, transfer } = useContext(
@@ -30,12 +30,12 @@ export const ConfirmTransferModal = ({ isOpen, onClose }) => {
       ((Number(fromAmount) - Number(toAmount)) * 100) / Number(fromAmount),
     );
   }, [fromAmount, toAmount]);
-  const isxDai = isHomeChain(fromToken.chainId);
+  const isxDai = isxDaiChain(fromToken.chainId);
   const fromAmt = formatValue(fromAmount, fromToken.decimals);
-  const fromUnit = fromToken.symbol + (isxDai ? ' on xDai' : '');
+  const fromUnit = fromToken.symbol + (isxDai ? ' on BSC' : '');
   const toAmt = formatValue(toAmount, toToken.decimals);
-  const toUnit = toToken.symbol + (isxDai ? '' : ' on xDai');
-  const isERC20Dai = isERC20DaiAddress(fromToken);
+  const toUnit = toToken.symbol + (isxDai ? '' : ' on BSC');
+  // const isERC20Dai = isERC20DaiAddress(fromToken);
 
   const onClick = () => {
     transfer();
@@ -53,7 +53,7 @@ export const ConfirmTransferModal = ({ isOpen, onClose }) => {
           mx={{ base: 12, lg: 0 }}
         >
           <ModalHeader p={6}>
-            {isERC20Dai && <DaiWarning />}
+            {/* {isERC20Dai && <DaiWarning />} */}
             <Text>Confirm Transfer</Text>
           </ModalHeader>
           <ModalCloseButton

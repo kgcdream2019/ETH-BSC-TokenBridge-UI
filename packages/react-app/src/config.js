@@ -1,4 +1,4 @@
 export const CONFIG = {
   infuraId:
-    process.env.REACT_APP_INFURA_ID || '61a5aaecc27646d9ba6ece87c1065806',
+    process.env.REACT_APP_INFURA_ID || 'a03ad9aff376408284569414ae376d31',
 };

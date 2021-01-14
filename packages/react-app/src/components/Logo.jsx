@@ -1,10 +1,10 @@
-import { Image } from '@chakra-ui/core';
+import { Image } from '@chakra-ui/react';
 import React, { useContext, useState } from 'react';
 
+import BSCLogo from '../assets/bsc-logo.png';
 import EthLogo from '../assets/eth-logo.png';
-import xDAILogo from '../assets/xdai-logo.png';
 import { Web3Context } from '../contexts/Web3Context';
-import { isHomeChain, uriToHttp } from '../lib/helpers';
+import { isxDaiChain, uriToHttp } from '../lib/helpers';
 
 const BAD_SRCS = {};
 
@@ -14,9 +14,9 @@ const BAD_SRCS = {};
 export const Logo = ({ uri, reverseFallback = false }) => {
   const { network } = useContext(Web3Context);
   const fallbackCheck = reverseFallback
-    ? !isHomeChain(network.value)
-    : isHomeChain(network.value);
-  const fallbackLogo = fallbackCheck ? xDAILogo : EthLogo;
+    ? !isxDaiChain(network.value)
+    : isxDaiChain(network.value);
+  const fallbackLogo = fallbackCheck ? BSCLogo : EthLogo;
   const [, refresh] = useState(0);
 
   if (uri) {

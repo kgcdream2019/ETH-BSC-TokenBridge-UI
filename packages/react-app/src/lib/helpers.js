@@ -13,27 +13,34 @@ import { getOverriddenMediator, isOverridden } from './overrides';
 
 export const getBridgeNetwork = chainId => {
   switch (chainId) {
+    // case 1:
+    //   return 100;
+    // case 42:
+    //   return 77;
+    // case 77:
+    //   return 42;
+    // case 100:
+    // default:
+    //   return 1;
     case 1:
       return 56;
-    case 42:
-      return 77;
-    case 77:
-      return 42;
     case 56:
     default:
       return 1;
   }
 };
 
-export const isHomeChain = chainId => {
+export const isxDaiChain = chainId => {
   switch (chainId) {
     case 1:
       return false;
     case 42:
       return false;
+    case 56:
+      return true;
     case 77:
       return true;
-    case 56:
+    case 100:
     default:
       return true;
   }
@@ -45,11 +52,13 @@ export const getDefaultToken = chainId => {
       return defaultTokens[1];
     case 42:
       return defaultTokens[42];
+    case 56:
+      return defaultTokens[56];
     case 77:
       return defaultTokens[77];
-    case 56:
+    case 100:
     default:
-      return defaultTokens[56];
+      return defaultTokens[100];
   }
 };
 
@@ -62,11 +71,13 @@ export const getMediatorAddress = (tokenAddress, chainId) => {
       return mediators[1];
     case 42:
       return mediators[42];
+    case 56:
+      return mediators[56];
     case 77:
       return mediators[77];
-    case 56:
+    case 100:
     default:
-      return mediators[56];
+      return mediators[100];
   }
 };
 
@@ -76,11 +87,13 @@ export const getNetworkName = chainId => {
       return networkNames[1];
     case 42:
       return networkNames[42];
+    case 56:
+      return networkNames[56];
     case 77:
       return networkNames[77];
-    case 56:
+    case 100:
     default:
-      return networkNames[56];
+      return networkNames[100];
   }
 };
 
@@ -90,11 +103,13 @@ export const getAMBAddress = chainId => {
       return ambs[1];
     case 42:
       return ambs[42];
+    case 56:
+      return ambs[56];
     case 77:
       return ambs[77];
-    case 56:
+    case 100:
     default:
-      return ambs[56];
+      return ambs[100];
   }
 };
 
@@ -104,11 +119,13 @@ export const getGraphEndpoint = chainId => {
       return graphEndpoints[1];
     case 42:
       return graphEndpoints[42];
+    case 56:
+      return graphEndpoints[56];
     case 77:
       return graphEndpoints[77];
-    case 56:
+    case 100:
     default:
-      return graphEndpoints[56];
+      return graphEndpoints[100];
   }
 };
 
@@ -118,11 +135,13 @@ export const getRPCUrl = chainId => {
       return chainUrls[1].rpc;
     case 42:
       return chainUrls[42].rpc;
+    case 56:
+      return chainUrls[56].rpc;
     case 77:
       return chainUrls[77].rpc;
-    case 56:
+    case 100:
     default:
-      return chainUrls[56].rpc;
+      return chainUrls[100].rpc;
   }
 };
 
@@ -132,11 +151,13 @@ export const getExplorerUrl = chainId => {
       return chainUrls[1].explorer;
     case 42:
       return chainUrls[42].explorer;
+    case 56:
+      return chainUrls[56].explorer;
     case 77:
       return chainUrls[77].explorer;
-    case 56:
+    case 100:
     default:
-      return chainUrls[56].explorer;
+      return chainUrls[100].explorer;
   }
 };
 
@@ -145,14 +166,16 @@ export const getMonitorUrl = (chainId, hash) => {
   const testUrl = 'https://alm-test-amb.herokuapp.com/';
   switch (chainId) {
     case 1:
-      return `${url}1/${hash}`;
+      return `http://alm-bsc.herokuapp.com/1/${hash}`;
     case 42:
       return `${testUrl}42/${hash}`;
+    case 56:
+      return `http://alm-bsc.herokuapp.com/56/${hash}`;
     case 77:
       return `${testUrl}77/${hash}`;
-    case 56:
+    case 100:
     default:
-      return `${url}56/${hash}`;
+      return `${url}100/${hash}`;
   }
 };
 
@@ -177,11 +200,13 @@ export const getTokenListUrl = chainId => {
       return defaultTokensUrl[1];
     case 42:
       return defaultTokensUrl[42];
+    case 56:
+      return defaultTokensUrl[56];
     case 77:
       return defaultTokensUrl[77];
     default:
-    case 56:
-      return defaultTokensUrl[56];
+    case 100:
+      return defaultTokensUrl[100];
   }
 };
 

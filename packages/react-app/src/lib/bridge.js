@@ -7,7 +7,7 @@ import {
   defaultMinPerTx,
   getBridgeNetwork,
   getMediatorAddress,
-  isHomeChain,
+  isxDaiChain,
 } from './helpers';
 import { getOverriddenToToken, isOverridden } from './overrides';
 import { getEthersProvider } from './providers';
@@ -17,7 +17,7 @@ export const fetchToTokenAddress = async (fromChainId, tokenAddress) => {
   if (isOverridden(tokenAddress)) {
     return getOverriddenToToken(tokenAddress, fromChainId);
   }
-  const isxDai = isHomeChain(fromChainId);
+  const isxDai = isxDaiChain(fromChainId);
   const xDaiChainId = isxDai ? fromChainId : getBridgeNetwork(fromChainId);
   const ethersProvider = getEthersProvider(xDaiChainId);
   const mediatorAddress = getMediatorAddress(tokenAddress, xDaiChainId);
@@ -38,7 +38,7 @@ export const fetchToAmount = async (fromToken, toToken, fromAmount) => {
   if (isOverridden(fromToken.address)) {
     return fromAmount;
   }
-  const isxDai = isHomeChain(toToken.chainId);
+  const isxDai = isxDaiChain(toToken.chainId);
   const xDaiChainId = isxDai
     ? toToken.chainId
     : getBridgeNetwork(toToken.chainId);
@@ -76,9 +76,9 @@ export const fetchToToken = async fromToken => {
   );
 
   const toChainId = getBridgeNetwork(fromToken.chainId);
-  const isxDai = isHomeChain(toChainId);
+  const isxDai = isxDaiChain(toChainId);
   return {
-    name: isxDai ? `${fromToken.name} on xDai` : fromToken.name.slice(0, -8),
+    name: isxDai ? `${fromToken.name} on BSC` : fromToken.name.slice(0, -7),
     address: toTokenAddress,
     symbol: fromToken.symbol,
     decimals: fromToken.decimals,
@@ -102,7 +102,7 @@ export const fetchTokenLimits = async (token, walletProvider) => {
     mediatorAbi,
     walletProvider,
   );
-  const isxDai = isHomeChain(token.chainId);
+  const isxDai = isxDaiChain(token.chainId);
   let minPerTx = defaultMinPerTx(isxDai, token.decimals);
   let maxPerTx = defaultMaxPerTx(token.decimals);
   let dailyLimit = defaultDailyLimit(token.decimals);
@@ -143,7 +143,7 @@ export const relayTokens = async (ethersProvider, token, amount) => {
 
 export const transferTokens = async (ethersProvider, token, amount) => {
   const confirmsPromise = fetchConfirmations(token.chainId, ethersProvider);
-  const txPromise = isHomeChain(token.chainId)
+  const txPromise = isxDaiChain(token.chainId)
     ? transferAndCallToken(ethersProvider, token, amount)
     : relayTokens(ethersProvider, token, amount);
   const totalConfirms = parseInt(await confirmsPromise, 10);
