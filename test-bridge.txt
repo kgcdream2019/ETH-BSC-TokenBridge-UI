@@ -1,6 +1,6 @@
 
 KimChi token https://etherscan.io/address/0x1e18821e69b9faa8e6e75dffe54e7e25754beda0
-ETH -> BSC
+ETH -> BSC 100 KimChi   -> 90 Kimchi
 approve
 https://etherscan.io/tx/0x38fca18c87fd0bfe77998ff9520ef3ade21acf71b3859bfbeb9131a31713ea7e
 realytoken
@@ -10,4 +10,12 @@ https://etherscan.io/tx/0xcf6e7d65bef046319cdbf4fde7ccca29d289678e24c5ccc7b94127
 
 executeAffirmation
 https://bscscan.com/tx/0x27123e695fc7ccbb326f152d7f57cc84f59283926028cea0b4ce4abc94f46e9b
+
+
+
+
+
+1. juld asset then BSC-> ETH transfer enable
+2. UI update (color, logo, link)
+3. bridge create option
 

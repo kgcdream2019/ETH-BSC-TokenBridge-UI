@@ -2,6 +2,7 @@ import { Box, Flex, HStack, Text, useBreakpointValue } from '@chakra-ui/react';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import { DiscordIcon } from '../icons/DiscordIcon';
 import { GithubIcon } from '../icons/GithubIcon';
 import { OmniBridgeIcon } from '../icons/OmniBridgeIcon';
 import { RaidGuildIcon } from '../icons/RaidGuildIcon';
@@ -37,7 +38,7 @@ export const Footer = () => {
       <HStack spacing={4}>
         <Box _hover={{ color: 'blue.500' }}>
           <a
-            href="https://xdaichain.com"
+            href="https://justliquidity.org"
             rel="noreferrer noopener"
             target="_blank"
           >
@@ -46,7 +47,7 @@ export const Footer = () => {
         </Box>
         <Box _hover={{ color: 'blue.500' }} transition="0.25s">
           <a
-            href="https://twitter.com/xdaichain"
+            href="https://twitter.com/justliquidity"
             rel="noreferrer noopener"
             target="_blank"
           >
@@ -55,7 +56,7 @@ export const Footer = () => {
         </Box>
         <Box _hover={{ color: 'blue.500' }} transition="0.25s">
           <a
-            href="https://t.me/xdaistable"
+            href="https://t.me/justliquidity"
             rel="noreferrer noopener"
             target="_blank"
           >
@@ -64,14 +65,25 @@ export const Footer = () => {
         </Box>
         <Box _hover={{ color: 'blue.500' }} transition="0.25s">
           <a
-            href="https://github.com/xdaichain"
+            href="https://discord.gg/dnWmWThbYB"
+            rel="noreferrer noopener"
+            target="_blank"
+          >
+            <DiscordIcon />
+          </a>
+        </Box>
+
+        <Box _hover={{ color: 'blue.500' }} transition="0.25s">
+          <a
+            href="https://github.com/justliquidity"
             rel="noreferrer noopener"
             target="_blank"
           >
             <GithubIcon />
           </a>
         </Box>
-        <Box w="1px" h={5} background="grey" />
+
+        {/* <Box w="1px" h={5} background="grey" />
         <a
           href="https://raidguild.org"
           rel="noreferrer noopener"
@@ -85,7 +97,7 @@ export const Footer = () => {
             <Text>Built by</Text>
             <RaidGuildIcon boxSize={16} ml={2} />
           </Flex>
-        </a>
+        </a> */}
       </HStack>
     </Flex>
   );
