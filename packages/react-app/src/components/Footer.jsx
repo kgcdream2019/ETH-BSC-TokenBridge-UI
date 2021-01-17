@@ -1,5 +1,6 @@
 import { Box, Flex, HStack, Text, useBreakpointValue } from '@chakra-ui/react';
 import React from 'react';
+import { Home } from 'react-feather';
 import { Link } from 'react-router-dom';
 
 import { DiscordIcon } from '../icons/DiscordIcon';
@@ -31,7 +32,7 @@ export const Footer = () => {
             _hover={{ color: 'blue.500' }}
             transition="0.25s"
           >
-            <OmniBridgeIcon w={6} />
+            <Home w={6} />
           </Flex>
         </Link>
       )}
