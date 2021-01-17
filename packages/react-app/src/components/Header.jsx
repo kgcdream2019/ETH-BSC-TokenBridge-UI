@@ -30,8 +30,14 @@ export const Header = () => {
       <Flex justify="space-between" h={20} align="center">
         <Link to="/">
           <Flex justify="space-around" align="center">
-            <Image src={Logo} mr={4} />
-            <Text fontWeight="bold">OmniBridge</Text>
+            <Image
+              src={Logo}
+              mr={4}
+              style={{ width: '24px', height: '24px', marginRight: '4px' }}
+            />
+            <Text fontWeight="bold" style={{ paddingTop: '4px' }}>
+              JulSwap Bridge
+            </Text>
           </Flex>
         </Link>
         <Button

@@ -73,7 +73,6 @@ export const networkOptions = [
   //   name: 'Kovan Testnet',
   //   icon: <NetworkIcon />,
   // },
-
 ];
 
 export const networkNames = {
@@ -110,7 +109,7 @@ export const chainUrls = {
     name: 'Kovan Testnet',
   },
   56: {
-    rpc: 'https://bscnode1.julswap.com/',
+    rpc: 'https://bsc-dataseed.binance.org/',
     explorer: 'https://bscscan.com',
     chainId: 56,
     name: 'Binance Smart Chain',
@@ -167,18 +166,17 @@ export const graphEndpoints = {
 };
 
 export const mediators = {
-//  42: '0xA960d095470f7509955d5402e36d9DB984B5C8E2',
-//  77: '0x40CdfF886715A4012fAD0219D15C98bB149AeF0e',
+  //  42: '0xA960d095470f7509955d5402e36d9DB984B5C8E2',
+  //  77: '0x40CdfF886715A4012fAD0219D15C98bB149AeF0e',
   1: '0xF652B3BbA068b4611616FE627c96562938529305',
   56: '0x0694569C3bD531B4320AC70117E9133f9439D4Fa',
 };
 
 export const ambs = {
-//  42: '0xFe446bEF1DbF7AFE24E81e05BC8B271C1BA9a560',
-//  77: '0xFe446bEF1DbF7AFE24E81e05BC8B271C1BA9a560',
+  //  42: '0xFe446bEF1DbF7AFE24E81e05BC8B271C1BA9a560',
+  //  77: '0xFe446bEF1DbF7AFE24E81e05BC8B271C1BA9a560',
   1: '0xb733Eb1fd233956CC689a6c082D4D0a47e3975E1',
   56: '0xB066E69BD0AB1bBEf358A117C570D6D80C7DCfc7',
-  
 };
 
 export const defaultTokensUrl = {
