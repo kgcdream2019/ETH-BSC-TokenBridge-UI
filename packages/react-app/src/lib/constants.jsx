@@ -179,9 +179,16 @@ export const ambs = {
   56: '0xB066E69BD0AB1bBEf358A117C570D6D80C7DCfc7',
 };
 
+// export const defaultTokensUrl = {
+//   100: 'https://tokens.honeyswap.org',
+//   1: 'https://tokens.uniswap.org',
+//   42: '',
+//   77: '',
+//   56: '',
+// };
 export const defaultTokensUrl = {
-  100: 'https://tokens.honeyswap.org',
-  1: 'https://tokens.uniswap.org',
+  100: '',
+  1: '',
   42: '',
   77: '',
   56: '',
