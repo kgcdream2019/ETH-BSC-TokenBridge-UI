@@ -21,8 +21,8 @@
     "deploy-sokol": "graph deploy dan13ram/sokol-omnibridge --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/",
     "deploy-mainnet-bsc": "graph deploy justliquidity/mainnet-to-bsc-julswap-bridge --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/",
     "deploy-bsc-mainnet": "graph deploy bsc-to-mainnet-omnibridge --ipfs https://api.bscgraph.org/ --node https://api.bscgraph.org/deploy --debug",
-    "create-local": "graph create justliquidity/bsc-to-mainnet-julswap-bridge --node http://127.0.0.1:8020",
-    "deploy-local": "graph deploy justliquidity/bsc-to-mainnet-julswap-bridge --debug --ipfs http://localhost:5001 --node http://127.0.0.1:8020"
+    "create-local-bsc-mainnet": "graph create justliquidity/bsc-to-mainnet-julswap-bridge --node http://127.0.0.1:8020",
+    "deploy-local-bsc-mainnet": "graph deploy justliquidity/bsc-to-mainnet-julswap-bridge --debug --ipfs http://localhost:5001 --node http://127.0.0.1:8020"
   },
   "devDependencies": {
     "mustache": "^4.0.1"
