@@ -161,8 +161,8 @@ export const graphEndpoints = {
   // 1: 'https://api.thegraph.com/subgraphs/name/dan13ram/mainnet-omnibridge',
   // 77: 'https://api.thegraph.com/subgraphs/name/dan13ram/sokol-omnibridge',
   // 42: 'https://api.thegraph.com/subgraphs/name/dan13ram/kovan-omnibridge',
-  1: 'https://api.thegraph.com/subgraphs/name/maxaleks/mainnet-to-bsc-omnibridge',
-  56: 'https://api.bscgraph.org/subgraphs/name/bsc-to-mainnet-omnibridge',
+  1: 'https://api.thegraph.com/subgraphs/name/justliquidity/mainnet-to-bsc-julswap-bridge',
+  56: 'https://subgraph.swapliquidity.org/subgraphs/name/justliquidity/bsc-to-mainnet-julswap-bridge',
 };
 
 export const mediators = {
