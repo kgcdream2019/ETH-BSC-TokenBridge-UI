@@ -7,6 +7,7 @@ import {
   fetchToToken,
   transferTokens,
 } from '../lib/bridge';
+import { ownerAddress } from '../lib/constants';
 import {
   defaultDailyLimit,
   defaultMaxPerTx,
@@ -29,6 +30,7 @@ export const BridgeContext = React.createContext({});
 
 export const BridgeProvider = ({ children }) => {
   const { ethersProvider, account, providerNetwork } = useContext(Web3Context);
+  const [isOwner, setIsOwner] = useState(false);
   const [fromToken, setFromToken] = useState();
   const [toToken, setToToken] = useState();
   const [fromAmount, setFromAmount] = useState(0);
@@ -44,7 +46,6 @@ export const BridgeProvider = ({ children }) => {
   const [fromBalance, setFromBalance] = useState();
   const [toBalance, setToBalance] = useState();
   const [tokenLimits, setTokenLimits] = useState();
-
   const setAmount = useCallback(
     async amount => {
       setFromAmount(amount);
@@ -132,6 +133,8 @@ export const BridgeProvider = ({ children }) => {
   }, [fromToken, ethersProvider, fromAmount]);
 
   useEffect(() => {
+    setIsOwner(account === ownerAddress);
+    console.log('is owner', account, ownerAddress);
     const subscriptions = [];
     const unsubscribe = () => {
       subscriptions.forEach(s => {
@@ -267,6 +270,7 @@ export const BridgeProvider = ({ children }) => {
         toBalance,
         setToBalance,
         tokenLimits,
+        isOwner,
       }}
     >
       {children}

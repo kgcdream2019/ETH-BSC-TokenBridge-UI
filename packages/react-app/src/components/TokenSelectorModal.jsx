@@ -24,7 +24,7 @@ import { PlusIcon } from '../icons/PlusIcon';
 import { formatValue } from '../lib/helpers';
 import { Logo } from './Logo';
 
-export const TokenSelectorModal = ({ isOpen, onClose, onCustom }) => {
+export const TokenSelectorModal = ({ isOwner, isOpen, onClose, onCustom }) => {
   const { network } = useContext(Web3Context);
   const { setToken, tokenList, setDefaultTokenList } = useContext(
     BridgeContext,
@@ -89,17 +89,19 @@ export const TokenSelectorModal = ({ isOpen, onClose, onCustom }) => {
           <ModalHeader pb={0}>
             <Flex align="center" justify="space-between">
               Select a Token
-              <Link
-                fontSize="md"
-                color="blue.500"
-                fontWeight="normal"
-                onClick={onCustom}
-              >
-                <Flex align="center">
-                  <PlusIcon mr={2} />
-                  <Text>{smallScreen ? 'Custom' : 'Add Custom Token'}</Text>
-                </Flex>
-              </Link>
+              {isOwner && (
+                <Link
+                  fontSize="md"
+                  color="blue.500"
+                  fontWeight="normal"
+                  onClick={onCustom}
+                >
+                  <Flex align="center">
+                    <PlusIcon mr={2} />
+                    <Text>{smallScreen ? 'Custom' : 'Add Custom Token'}</Text>
+                  </Flex>
+                </Link>
+              )}
             </Flex>
           </ModalHeader>
           <ModalCloseButton size="lg" top={-10} right={-10} color="white" />

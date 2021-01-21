@@ -12,6 +12,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import DropDown from '../assets/drop-down.svg';
 import { BridgeContext } from '../contexts/BridgeContext';
 import { Web3Context } from '../contexts/Web3Context';
+import { ownerAddress } from '../lib/constants';
 import { formatValue, parseValue } from '../lib/helpers';
 import { fetchTokenBalanceWithProvider } from '../lib/token';
 import { ErrorModal } from './ErrorModal';
@@ -36,6 +37,7 @@ export const FromToken = () => {
   } = useContext(BridgeContext);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [message, setMessage] = useState();
+  const [isOwner, setIsOwner] = useState(false);
   const onClick = () => {
     if (!ethersProvider) {
       setMessage('Please connect wallet');
@@ -49,6 +51,8 @@ export const FromToken = () => {
   const smallScreen = useBreakpointValue({ base: true, lg: false });
 
   useEffect(() => {
+    setIsOwner(account === ownerAddress);
+
     if (!account) {
       setBalance();
     }
@@ -78,7 +82,9 @@ export const FromToken = () => {
       {message && (
         <ErrorModal message={message} isOpen={isOpen} onClose={onClose} />
       )}
-      {!message && <SelectTokenModal onClose={onClose} isOpen={isOpen} />}
+      {!message && (
+        <SelectTokenModal onClose={onClose} isOpen={isOpen} isOwner={isOwner} />
+      )}
       {!smallScreen && (
         <svg width="100%" viewBox="0 0 381 94" fill="none">
           <path
