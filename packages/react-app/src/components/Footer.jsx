@@ -1,12 +1,10 @@
-import { Box, Flex, HStack, Text, useBreakpointValue } from '@chakra-ui/react';
+import { Box, Flex, HStack, useBreakpointValue } from '@chakra-ui/react';
 import React from 'react';
 import { Home } from 'react-feather';
 import { Link } from 'react-router-dom';
 
 import { DiscordIcon } from '../icons/DiscordIcon';
 import { GithubIcon } from '../icons/GithubIcon';
-import { OmniBridgeIcon } from '../icons/OmniBridgeIcon';
-import { RaidGuildIcon } from '../icons/RaidGuildIcon';
 import { TelegramIcon } from '../icons/TelegramIcon';
 import { TwitterIcon } from '../icons/TwitterIcon';
 import { XDaiIcon } from '../icons/XDaiIcon';

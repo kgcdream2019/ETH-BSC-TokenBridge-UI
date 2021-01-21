@@ -7,7 +7,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "auth": "graph auth https://api.thegraph.com/ $GRAPH_ACCESS_TOKEN",
+    "auth": "graph auth https://api.thegraph.com/deploy/ $GRAPH_ACCESS_TOKEN",
     "prepare-mainnet": "mustache config/mainnet.json subgraph.template.yaml > subgraph.yaml",
     "prepare-bsc": "mustache config/bsc-mainnet.json subgraph.template.yaml > subgraph.yaml",
     "prepare-xdai": "mustache config/xdai.json subgraph.template.yaml > subgraph.yaml",
@@ -19,7 +19,7 @@
     "deploy-xdai": "graph deploy dan13ram/xdai-omnibridge --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/",
     "deploy-kovan": "graph deploy dan13ram/kovan-omnibridge --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/",
     "deploy-sokol": "graph deploy dan13ram/sokol-omnibridge --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/",
-    "deploy-mainnet-bsc": "graph deploy justliquidity/mainnet-to-bsc-julswap-bridge --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/",
+    "deploy-mainnet-bsc": "graph deploy kgcdream2019/julswap-bridge --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/",
     "deploy-bsc-mainnet": "graph deploy bsc-to-mainnet-omnibridge --ipfs https://api.bscgraph.org/ --node https://api.bscgraph.org/deploy --debug",
     "create-local-bsc-mainnet": "graph create justliquidity/bsc-to-mainnet-julswap-bridge --node http://127.0.0.1:8020",
     "deploy-local-bsc-mainnet": "graph deploy justliquidity/bsc-to-mainnet-julswap-bridge --debug --ipfs http://localhost:5001 --node http://127.0.0.1:8020"

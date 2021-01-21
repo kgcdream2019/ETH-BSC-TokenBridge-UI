@@ -125,13 +125,13 @@ export const defaultTokens = {
     chainId: 100,
   },
   1: {
-    name: 'STAKE',
-    address: '0x0Ae055097C6d159879521C384F1D2123D1f195e6',
-    symbol: 'STAKE',
+    name: 'KIMCHI',
+    address: '0x1E18821E69B9FAA8e6e75DFFe54E7E25754beDa0',
+    symbol: 'KIMCHI',
     decimals: 18,
     chainId: 1,
     logoURI:
-      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x0Ae055097C6d159879521C384F1D2123D1f195e6/logo.png',
+      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x1E18821E69B9FAA8e6e75DFFe54E7E25754beDa0/logo.png',
   },
   77: {
     name: 'FaucetToken on xDai',
@@ -148,9 +148,9 @@ export const defaultTokens = {
     chainId: 42,
   },
   56: {
-    name: 'STAKE on BSC',
-    address: '0xe55e614862694214f0339adb551393cb56149323',
-    symbol: 'STAKE',
+    name: 'KIMCHI on BSC',
+    address: '0x3454Cc4C19F5609b7ba5AD15BB7880BdB8B40DEe',
+    symbol: 'KIMCHI',
     decimals: 18,
     chainId: 56,
   },
@@ -161,7 +161,7 @@ export const graphEndpoints = {
   // 1: 'https://api.thegraph.com/subgraphs/name/dan13ram/mainnet-omnibridge',
   // 77: 'https://api.thegraph.com/subgraphs/name/dan13ram/sokol-omnibridge',
   // 42: 'https://api.thegraph.com/subgraphs/name/dan13ram/kovan-omnibridge',
-  1: 'https://api.thegraph.com/subgraphs/name/justliquidity/mainnet-to-bsc-julswap-bridge',
+  1: 'https://api.thegraph.com/subgraphs/name/kgcdream2019/julswap-bridge',
   56: 'https://subgraph.swapliquidity.org/subgraphs/name/justliquidity/bsc-to-mainnet-julswap-bridge',
 };
 
