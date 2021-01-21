@@ -20,7 +20,7 @@ import { Web3Context } from '../contexts/Web3Context';
 import { uniqueTokens } from '../lib/helpers';
 import { fetchTokenDetails } from '../lib/token';
 
-export const CustomTokenModal = ({ isOpen, onClose, onBack }) => {
+export const CustomTokenModal = ({ isOwner, isOpen, onClose, onBack }) => {
   const { setToken } = useContext(BridgeContext);
   const { network } = useContext(Web3Context);
   const [customToken, setCustomToken] = useState({
@@ -165,14 +165,16 @@ export const CustomTokenModal = ({ isOpen, onClose, onBack }) => {
               >
                 Back
               </Button>
-              <Button
-                px={12}
-                onClick={onClick}
-                colorScheme="blue"
-                mt={{ base: 2, md: 0 }}
-              >
-                Add Token
-              </Button>
+              {isOwner && (
+                <Button
+                  px={12}
+                  onClick={onClick}
+                  colorScheme="blue"
+                  mt={{ base: 2, md: 0 }}
+                >
+                  Add Token
+                </Button>
+              )}
             </Flex>
           </ModalFooter>
         </ModalContent>
