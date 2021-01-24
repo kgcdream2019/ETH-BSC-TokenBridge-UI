@@ -7,7 +7,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "auth": "graph auth https://api.thegraph.com/deploy/ $GRAPH_ACCESS_TOKEN",
+    "auth": "graph auth https://api.thegraph.com/deploy/ 1e44096c1f424a1ab5fca5d278fac4af",
     "prepare-mainnet": "mustache config/mainnet.json subgraph.template.yaml > subgraph.yaml",
     "prepare-bsc": "mustache config/bsc-mainnet.json subgraph.template.yaml > subgraph.yaml",
     "prepare-xdai": "mustache config/xdai.json subgraph.template.yaml > subgraph.yaml",

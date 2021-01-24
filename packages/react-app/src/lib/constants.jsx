@@ -1,7 +1,8 @@
 import React from 'react';
 
 import { CONFIG } from '../config';
-import { NetworkIcon } from '../icons/NetworkIcon';
+import { BinanceNetworkIcon } from '../icons/BinanceNetworkIcon';
+import { EthereumNetworkIcon } from '../icons/EthereumNetworkIcon';
 
 export const ADDRESS_ZERO = '0x0000000000000000000000000000000000000000';
 
@@ -31,7 +32,7 @@ export const networkOptions = [
     bridge: { chainId: 1, name: 'ETH Mainnet' },
     label: 'Binance Smart Chain',
     name: 'Binance Smart Chain',
-    icon: <NetworkIcon />,
+    icon: <BinanceNetworkIcon />,
   },
   {
     value: 1,
@@ -39,7 +40,7 @@ export const networkOptions = [
     bridge: { chainId: 56, name: 'Binance Smart Chain' },
     label: 'Mainnet',
     name: 'ETH Mainnet',
-    icon: <NetworkIcon />,
+    icon: <EthereumNetworkIcon />,
   },
   // {
   //   value: 100,
