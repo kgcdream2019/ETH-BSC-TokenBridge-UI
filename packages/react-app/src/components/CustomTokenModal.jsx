@@ -95,13 +95,14 @@ export const CustomTokenModal = ({ isOwner, isOpen, onClose, onBack }) => {
     >
       <ModalOverlay background="modalBG">
         <ModalContent
-          boxShadow="0px 1rem 2rem #617492"
+          boxShadow="rgb(11, 14, 17) 0px 0px 16px"
           borderRadius="1rem"
           maxW="30rem"
           mx={{ base: 12, lg: 0 }}
+          background="rgb(30, 32, 38)"
         >
           <ModalHeader p={6}>
-            <Text>Add Custom Token</Text>
+            <Text color="rgb(230,232,236)">Add Custom Token</Text>
           </ModalHeader>
           <ModalCloseButton
             size="lg"
@@ -112,7 +113,9 @@ export const CustomTokenModal = ({ isOwner, isOpen, onClose, onBack }) => {
           />
           <ModalBody px={6} py={0}>
             <Flex flexDirection="column">
-              <Text mb={2}>Token Contract Address</Text>
+              <Text mb={2} color="rgb(230,232,236)">
+                Token Contract Address
+              </Text>
               <InputGroup mb={4} borderColor="#DAE3F0">
                 <Input
                   id="address"
@@ -125,7 +128,9 @@ export const CustomTokenModal = ({ isOwner, isOpen, onClose, onBack }) => {
                   isInvalid={addressInvalid}
                 />
               </InputGroup>
-              <Text mb={2}>Token Symbol</Text>
+              <Text mb={2} color="rgb(230,232,236)">
+                Token Symbol
+              </Text>
               <InputGroup mb={4} borderColor="#DAE3F0">
                 <Input
                   id="symbol"
@@ -136,7 +141,9 @@ export const CustomTokenModal = ({ isOwner, isOpen, onClose, onBack }) => {
                   value={customToken.symbol}
                 />
               </InputGroup>
-              <Text mb={2}>Decimals of Precision</Text>
+              <Text mb={2} color="rgb(230,232,236)">
+                Decimals of Precision
+              </Text>
               <InputGroup mb={4} borderColor="#DAE3F0">
                 <Input
                   id="decimals"

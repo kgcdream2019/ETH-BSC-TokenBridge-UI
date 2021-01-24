@@ -16,10 +16,11 @@ export const ErrorModal = ({ message, isOpen, onClose }) => {
     <Modal isOpen={isOpen} onClose={onClose} isCentered>
       <ModalOverlay background="modalBG">
         <ModalContent
-          boxShadow="0px 1rem 2rem #617492"
+          boxShadow="rgb(11, 14, 17) 0px 0px 16px"
           borderRadius={{ base: '1rem', md: 'full' }}
           mx={{ base: 12, lg: 0 }}
           maxW={{ base: '20rem', md: '25rem' }}
+          background="rgb(30, 32, 38)"
         >
           <ModalCloseButton
             size="lg"

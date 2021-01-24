@@ -79,15 +79,20 @@ export const TokenSelectorModal = ({ isOwner, isOpen, onClose, onCustom }) => {
     >
       <ModalOverlay background="modalBG">
         <ModalContent
-          boxShadow="0px 1rem 2rem #617492"
+          boxShadow="rgb(11, 14, 17) 0px 0px 16px"
           borderRadius="1rem"
           pb={4}
           pt={2}
           maxW="30rem"
           mx={{ base: 12, lg: 0 }}
+          background="rgb(30, 32, 38)"
         >
           <ModalHeader pb={0}>
-            <Flex align="center" justify="space-between">
+            <Flex
+              align="center"
+              justify="space-between"
+              color="rgb(230,232,236)"
+            >
               Select a Token
               {isOwner && (
                 <Link
@@ -145,7 +150,12 @@ export const TokenSelectorModal = ({ isOwner, isOpen, onClose, onCustom }) => {
                     >
                       <Logo uri={token.logoURI} />
                     </Flex>
-                    <Text fontSize="lg" fontWeight="bold" mx={2}>
+                    <Text
+                      fontSize="lg"
+                      fontWeight="bold"
+                      mx={2}
+                      color="rgb(230,232,236)"
+                    >
                       {token.symbol}
                     </Text>
                   </Flex>

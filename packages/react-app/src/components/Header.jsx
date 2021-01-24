@@ -47,7 +47,7 @@ export const Header = () => {
           variant="link"
           // _focus={{ outline: 'none', border: 'none' }}
           display={{ base: 'block', md: 'none' }}
-          color="blue.500"
+          color="grey"
           _hover={{ color: 'blue.600' }}
           onClick={toggleOpen}
           minW="auto"

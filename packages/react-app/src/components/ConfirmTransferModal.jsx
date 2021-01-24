@@ -47,10 +47,11 @@ export const ConfirmTransferModal = ({ isOpen, onClose }) => {
     <Modal isOpen={isOpen} onClose={onClose} isCentered>
       <ModalOverlay background="modalBG">
         <ModalContent
-          boxShadow="0px 1rem 2rem #617492"
+          boxShadow="rgb(11, 14, 17) 0px 0px 16px"
           borderRadius="1rem"
           maxW="30rem"
           mx={{ base: 12, lg: 0 }}
+          background="rgb(30, 32, 38)"
         >
           <ModalHeader p={6}>
             {/* {isERC20Dai && <DaiWarning />} */}
