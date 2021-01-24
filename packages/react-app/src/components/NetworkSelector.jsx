@@ -21,7 +21,7 @@ const SelectOption = props => {
   return (
     <Flex transition="0.25s" _hover={{ background: 'background' }}>
       <Button
-        background="transparent"
+        background="grey"
         width="100%"
         justifyContent="flex-start"
         fontWeight="normal"
@@ -30,7 +30,7 @@ const SelectOption = props => {
         onClick={() => onChange(network)}
       >
         {icon}
-        <Text color="black" ml={2}>
+        <Text color="white" ml={2}>
           {label}
         </Text>
       </Button>
@@ -41,7 +41,7 @@ const SelectOption = props => {
 const DropdownIndicator = () => {
   return (
     <Flex align="center" justify="center" paddingLeft="15px">
-      <DownArrowIcon fontSize={8} color="black" />
+      <DownArrowIcon fontSize={8} color="white" />
     </Flex>
   );
 };
@@ -56,7 +56,7 @@ const SelectValue = ({ icon, label }) => (
     align="center"
   >
     {icon}
-    <Text color="black" ml={2} fontWeight="bold">
+    <Text color="white" ml={2} fontWeight="bold">
       {label}
     </Text>
     <DropdownIndicator />

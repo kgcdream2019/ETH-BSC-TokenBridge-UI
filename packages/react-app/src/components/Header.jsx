@@ -16,16 +16,16 @@ export const Header = () => {
       justify="space-between"
       position="relative"
       align={{ base: 'stretch', md: 'center' }}
-      maxW="75rem"
       minH={20}
       px={8}
       w="100%"
-      background={isOpen ? { base: 'white', md: 'transparent' } : 'transparent'}
+      background="rgb(30, 32, 38)"
       direction={{ base: 'column', md: 'row' }}
       mb={isOpen ? { base: 4, md: 0 } : 0}
       boxShadow={
         isOpen ? { base: '0 0.5rem 1rem #CADAEF', md: 'none' } : 'none'
       }
+      marginBottom="1rem"
     >
       <Flex justify="space-between" h={20} align="center">
         <Link to="/">
@@ -35,7 +35,10 @@ export const Header = () => {
               mr={4}
               style={{ width: '24px', height: '24px', marginRight: '4px' }}
             />
-            <Text fontWeight="bold" style={{ paddingTop: '4px' }}>
+            <Text
+              fontWeight="bold"
+              style={{ paddingTop: '4px', color: 'white' }}
+            >
               JulSwap Bridge
             </Text>
           </Flex>
@@ -88,7 +91,7 @@ export const Header = () => {
             _hover={{ color: 'blue.500' }}
           >
             <HistoryIcon mr={2} />
-            <Text color="black"> History</Text>
+            <Text color="white"> History</Text>
           </Flex>
         </Link>
         <WalletSelector />

@@ -32,14 +32,15 @@ export const ToToken = () => {
       ml={{ base: 2, lg: -6 }}
       position="relative"
       borderRadius="0.25rem"
-      background={{ base: '#EEF4FD', lg: 'transparent' }}
+      border={{ base: '1px solid #DAE3F0', lg: 'none' }}
       minH={8}
     >
       {!smallScreen && (
         <svg width="100%" viewBox="0 0 381 94" fill="none">
           <path
             d="M20.806 4.484A8 8 0 0127.992 0H373a8 8 0 018 8v78a8 8 0 01-8 8H27.992a8 8 0 01-7.186-4.484l-19.085-39a8 8 0 010-7.032l19.085-39z"
-            fill="#EEF4FD"
+            fill="rgb(43, 47, 54)"
+            stroke="rgb(143, 147, 154)"
           />
         </svg>
       )}
@@ -73,7 +74,7 @@ export const ToToken = () => {
               >
                 <Logo uri={token.logoURI} reverseFallback />
               </Flex>
-              <Text fontSize="lg" fontWeight="bold">
+              <Text fontSize="lg" fontWeight="bold" color="rgb(230, 232, 236)">
                 {token.name}
               </Text>
             </Flex>
@@ -84,7 +85,7 @@ export const ToToken = () => {
             )}
           </Flex>
           <Flex align="flex-end" flex={1}>
-            <Text fontWeight="bold" fontSize="2xl">
+            <Text fontWeight="bold" fontSize="2xl" color="rgb(230, 232, 236)">
               {formatValue(amount, token.decimals)}
             </Text>
           </Flex>

@@ -1,8 +1,8 @@
 import { Flex, Image } from '@chakra-ui/react';
 import React from 'react';
 
-import DownTriangle from '../assets/down-triangle.svg';
-import UpTriangle from '../assets/up-triangle.svg';
+// import DownTriangle from '../assets/down-triangle.svg';
+// import UpTriangle from '../assets/up-triangle.svg';
 import { Footer } from './Footer';
 import { Header } from './Header';
 
@@ -19,7 +19,7 @@ export const Layout = ({ children }) => (
     background="background"
     position="relative"
   >
-    <Image
+    {/* <Image
       src={DownTriangle}
       position="absolute"
       right="min(-15rem, -20%)"
@@ -34,7 +34,7 @@ export const Layout = ({ children }) => (
       w="81rem"
       minWidth="60rem"
       opacity={0.99}
-    />
+    /> */}
     <Header />
     <Flex
       flex={1}
@@ -44,6 +44,7 @@ export const Layout = ({ children }) => (
       w="100%"
       h="100%"
       position="relative"
+      background="rgb(20,21,26)"
     >
       {children}
     </Flex>

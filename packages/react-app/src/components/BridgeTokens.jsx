@@ -21,8 +21,8 @@ export const BridgeTokens = () => {
     <Flex
       w="calc(100% - 2rem)"
       maxW="75rem"
-      background="white"
-      boxShadow="0px 1rem 2rem rgba(204, 218, 238, 0.8)"
+      background="rgb(30, 32, 38)"
+      // boxShadow="0px 1rem 2rem rgba(204, 218, 238, 0.8)"
       borderRadius="1rem"
       direction="column"
       align="center"
@@ -39,7 +39,11 @@ export const BridgeTokens = () => {
                 <Text color="greyText" fontSize="sm">
                   From
                 </Text>
-                <Text fontWeight="bold" fontSize="lg">
+                <Text
+                  fontWeight="bold"
+                  fontSize="lg"
+                  color="rgb(230, 232, 234)"
+                >
                   {network.name}
                 </Text>
               </Flex>
@@ -48,7 +52,12 @@ export const BridgeTokens = () => {
                 <Text color="greyText" fontSize="sm">
                   To
                 </Text>
-                <Text fontWeight="bold" fontSize="lg" textAlign="right">
+                <Text
+                  fontWeight="bold"
+                  fontSize="lg"
+                  textAlign="right"
+                  color="rgb(230, 232, 234)"
+                >
                   {network.bridge.name}
                 </Text>
               </Flex>
@@ -65,7 +74,11 @@ export const BridgeTokens = () => {
                 <Text color="greyText" fontSize="sm">
                   From
                 </Text>
-                <Text fontWeight="bold" fontSize="lg">
+                <Text
+                  fontWeight="bold"
+                  fontSize="lg"
+                  color="rgb(230, 232, 234)"
+                >
                   {network.name}
                 </Text>
               </Flex>
@@ -86,7 +99,12 @@ export const BridgeTokens = () => {
                 <Text color="greyText" fontSize="sm">
                   To
                 </Text>
-                <Text fontWeight="bold" fontSize="lg" textAlign="right">
+                <Text
+                  fontWeight="bold"
+                  fontSize="lg"
+                  textAlign="right"
+                  color="rgb(230, 232, 234)"
+                >
                   {network.bridge.name}
                 </Text>
               </Flex>

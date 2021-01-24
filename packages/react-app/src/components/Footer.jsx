@@ -17,10 +17,11 @@ export const Footer = () => {
       justify={{ base: 'center', sm: 'space-between' }}
       align="center"
       h={20}
-      maxW="75rem"
       px={8}
       w="100%"
-      color="grey"
+      color="rgb(230, 232, 238)"
+      background="rgb(30, 32, 38)"
+      marginTop="1rem"
     >
       {!smallScreen && (
         <Link to="/" display={{ base: 'none', sm: 'block' }}>

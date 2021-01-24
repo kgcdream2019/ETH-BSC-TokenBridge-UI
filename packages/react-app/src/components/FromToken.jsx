@@ -89,8 +89,8 @@ export const FromToken = () => {
         <svg width="100%" viewBox="0 0 381 94" fill="none">
           <path
             d="M359.745 4.703A7.5 7.5 0 00353.008.5H8A7.5 7.5 0 00.5 8v78A7.5 7.5 0 008 93.5h345.008a7.5 7.5 0 006.737-4.203l19.085-39a7.499 7.499 0 000-6.594l-19.085-39z"
-            fill="#fff"
-            stroke="#DAE3F0"
+            fill="rgb(43, 47, 54)"
+            stroke="rgb(143, 147, 154)"
           />
         </svg>
       )}
@@ -122,7 +122,12 @@ export const FromToken = () => {
               >
                 <Logo uri={token.logoURI} />
               </Flex>
-              <Text fontSize="lg" fontWeight="bold" mx={2}>
+              <Text
+                fontSize="lg"
+                fontWeight="bold"
+                mx={2}
+                color="rgb(230, 232, 236)"
+              >
                 {token.name}
               </Text>
               <Image src={DropDown} cursor="pointer" />
@@ -138,6 +143,7 @@ export const FromToken = () => {
               flex={1}
               variant="unstyled"
               type="number"
+              color="rgb(230, 232, 236)"
               value={input}
               placeholder="0.000"
               textAlign="left"
@@ -150,8 +156,8 @@ export const FromToken = () => {
             />
             <Button
               ml={2}
-              color="blue.500"
-              bg="blue.50"
+              color="rgb(230, 232, 236)"
+              bg="#414344"
               size="sm"
               fontSize="sm"
               fontWeight="normal"
