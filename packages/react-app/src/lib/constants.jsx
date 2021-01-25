@@ -127,13 +127,13 @@ export const defaultTokens = {
     chainId: 100,
   },
   1: {
-    name: 'KIMCHI',
-    address: '0x1E18821E69B9FAA8e6e75DFFe54E7E25754beDa0',
-    symbol: 'KIMCHI',
+    name: '1INCH Token',
+    address: '0x111111111117dC0aa78b770fA6A738034120C302',
+    symbol: '1INCH',
     decimals: 18,
     chainId: 1,
     logoURI:
-      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x1E18821E69B9FAA8e6e75DFFe54E7E25754beDa0/logo.png',
+      'https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x111111111117dC0aa78b770fA6A738034120C302/logo.png',
   },
   77: {
     name: 'FaucetToken on xDai',
@@ -150,9 +150,9 @@ export const defaultTokens = {
     chainId: 42,
   },
   56: {
-    name: 'KIMCHI on BSC',
+    name: '1INCH on BSC',
     address: '0x3454Cc4C19F5609b7ba5AD15BB7880BdB8B40DEe',
-    symbol: 'KIMCHI',
+    symbol: '1INCH',
     decimals: 18,
     chainId: 56,
   },
