@@ -39,7 +39,7 @@ export const Header = () => {
               fontWeight="bold"
               style={{ paddingTop: '4px', color: 'white' }}
             >
-              JulSwap Bridge
+              JustLiquidity Bridge
             </Text>
           </Flex>
         </Link>
