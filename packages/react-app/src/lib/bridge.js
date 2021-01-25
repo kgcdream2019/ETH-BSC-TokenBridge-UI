@@ -151,3 +151,45 @@ export const transferTokens = async (ethersProvider, token, amount) => {
 
   return [tx, totalConfirms];
 };
+
+export const relayTokensWithReferral = async (
+  ethersProvider,
+  token,
+  amount,
+  referral,
+) => {
+  const mediatorAddress = getMediatorAddress(token.address, token.chainId);
+  const abi = ['function relayTokensWithReferral(address, uint256, address)'];
+  const signer = ethersProvider.getSigner();
+  const mediatorContract = new Contract(mediatorAddress, abi, signer);
+
+  if (isOverridden(token.address)) {
+    // TODO: remove this check when abis of both mediators are same.
+    return mediatorContract.relayTokensWithReferral(
+      await signer.getAddress(),
+      amount,
+      referral,
+    );
+  }
+  return mediatorContract.relayTokensWithReferral(
+    token.address,
+    amount,
+    referral,
+  );
+};
+
+export const transferTokensWithReferral = async (
+  ethersProvider,
+  token,
+  amount,
+  referral,
+) => {
+  const confirmsPromise = fetchConfirmations(token.chainId, ethersProvider);
+  const txPromise = isxDaiChain(token.chainId)
+    ? transferAndCallToken(ethersProvider, token, amount)
+    : relayTokensWithReferral(ethersProvider, token, amount, referral);
+  const totalConfirms = parseInt(await confirmsPromise, 10);
+  const tx = await txPromise;
+
+  return [tx, totalConfirms];
+};
