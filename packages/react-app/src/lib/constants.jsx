@@ -116,7 +116,7 @@ export const chainUrls = {
     name: 'Binance Smart Chain',
   },
 };
-export const ownerAddress = '0xba008eC024511EE309152B0010335B8F9cF5bA5b';
+export const ownerAddress = '0xE5C355b6eD8996885abA7e9526A3733042abCd8F';
 
 export const defaultTokens = {
   100: {
