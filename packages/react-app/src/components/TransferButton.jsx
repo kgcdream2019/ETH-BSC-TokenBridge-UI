@@ -58,12 +58,12 @@ export const TransferButton = () => {
       as="button"
       align="center"
       mt={{ base: 2, md: 2, lg: 3 }}
-      color="blue.500"
+      color="red.600"
       _hover={
         !allowed
           ? undefined
           : {
-              color: 'blue.600',
+              color: 'red.700',
             }
       }
       cursor={!allowed ? 'not-allowed' : 'pointer'}

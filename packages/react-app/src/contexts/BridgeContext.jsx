@@ -6,7 +6,6 @@ import {
   fetchTokenLimits,
   fetchToToken,
   transferTokens,
-  transferTokensWithReferral,
 } from '../lib/bridge';
 import { ownerAddress } from '../lib/constants';
 import {
@@ -117,12 +116,10 @@ export const BridgeProvider = ({ children }) => {
   const transfer = useCallback(async () => {
     setLoading(true);
     try {
-      const [tx, numConfirms] = await transferTokensWithReferral(
+      const [tx, numConfirms] = await transferTokens(
         ethersProvider,
         fromToken,
         fromAmount,
-        // this code is only for testing
-        '0xafCe130B2cd93D191A6C16e784a4F200107399ee',
       );
       setTotalConfirms(numConfirms);
       setTxHash(tx.hash);
