@@ -21,7 +21,7 @@ const SelectOption = props => {
   return (
     <Flex transition="0.25s" _hover={{ background: 'background' }}>
       <Button
-        background="grey"
+        background="rgb(30, 32, 38)"
         width="100%"
         justifyContent="flex-start"
         fontWeight="normal"
@@ -126,7 +126,7 @@ export const NetworkSelector = props => {
         <PopoverContent
           width="min-content"
           border="1px solid rgba(226,232,240, 0.8)"
-          boxShadow="0 0.5rem 1rem #CADAEF"
+          boxShadow="0 0.5rem 1rem rgb(30, 32, 38)"
         >
           <PopoverBody padding={0}>{selectOptions}</PopoverBody>
         </PopoverContent>
