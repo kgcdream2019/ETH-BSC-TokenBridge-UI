@@ -30,18 +30,19 @@ export const SystemFeedback = () => {
         </Flex>
       </PopoverTrigger>
       <PopoverContent
-        boxShadow="0 0.5rem 1rem #CADAEF"
+        // boxShadow="0 0.5rem 1rem #CADAEF"
         border="none"
         minW="20rem"
         w="auto"
         maxW="30rem"
+        background="rgb(30,32,36)"
         // _focus={{ border: 'none', outline: 'none' }}
       >
         {token && tokenLimits && (
           <PopoverBody width="100%" align="center" fontSize="sm">
             <Flex align="center" justify="space-between">
               <Text color="grey"> Daily Limit </Text>
-              <Text fontWeight="bold" ml={4}>
+              <Text fontWeight="bold" color="white" ml={4}>
                 {`${utils.commify(
                   formatValue(tokenLimits.dailyLimit, token.decimals),
                 )} ${token.symbol}`}
@@ -49,7 +50,7 @@ export const SystemFeedback = () => {
             </Flex>
             <Flex align="center" justify="space-between">
               <Text color="grey"> Maximum per transaction </Text>
-              <Text fontWeight="bold" ml={4}>
+              <Text fontWeight="bold" color="white" ml={4}>
                 {`${utils.commify(
                   formatValue(tokenLimits.maxPerTx, token.decimals),
                 )} ${token.symbol}`}
@@ -57,7 +58,7 @@ export const SystemFeedback = () => {
             </Flex>
             <Flex align="center" justify="space-between">
               <Text color="grey"> Minimum per transaction </Text>
-              <Text fontWeight="bold" ml={4}>
+              <Text fontWeight="bold" color="white" ml={4}>
                 {`${utils.commify(
                   formatValue(tokenLimits.minPerTx, token.decimals),
                 )} ${token.symbol}`}

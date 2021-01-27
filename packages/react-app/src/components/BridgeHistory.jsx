@@ -1,4 +1,4 @@
-import { Flex, Grid, Text, Checkbox } from '@chakra-ui/react';
+import { Checkbox,Flex, Grid, Text } from '@chakra-ui/react';
 import React, { useContext, useEffect, useState } from 'react';
 
 import { Web3Context } from '../contexts/Web3Context';
@@ -31,7 +31,7 @@ export const BridgeHistory = ({ page }) => {
     <Flex w="100%" maxW="75rem" direction="column" mt={8} px={8}>
       <LoadingModal loadingProps={loading} />
       <Flex justify="space-between" align="center">
-        <Text fontSize="xl" fontWeight="bold" mb={4}>
+        <Text fontSize="xl" fontWeight="bold" color="white" mb={4}>
           History
         </Text>
         <Checkbox
@@ -39,6 +39,7 @@ export const BridgeHistory = ({ page }) => {
           onChange={e => setOnlyReceived(e.target.checked)}
           borderColor="grey"
           borderRadius="4px"
+          color="white"
         >
           Show only received
         </Checkbox>

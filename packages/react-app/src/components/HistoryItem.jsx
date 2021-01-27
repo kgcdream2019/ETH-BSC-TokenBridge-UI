@@ -28,14 +28,14 @@ export const HistoryItem = ({ chainId, date, hash }) => {
   return (
     <Flex
       w="100%"
-      background="white"
-      boxShadow="0px 1rem 2rem rgba(204, 218, 238, 0.8)"
+      background="rgb(30,31,34)"
+      // boxShadow="0px 1rem 2rem rgba(204, 218, 238, 0.8)"
       borderRadius="1rem"
       p={{ base: 4, sm: 8 }}
       mb={4}
     >
       <Grid templateColumns={{ base: '2fr 2fr', md: '2fr 3fr' }} w="100%">
-        <Text>{timestamp}</Text>
+        <Text color="grey">{timestamp}</Text>
         <Link
           color="blue.500"
           href={getMonitorUrl(chainId, hash)}
