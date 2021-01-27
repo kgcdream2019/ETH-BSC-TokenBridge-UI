@@ -33,6 +33,7 @@ export const HistoryItem = ({ chainId, date, hash }) => {
       borderRadius="1rem"
       p={{ base: 4, sm: 8 }}
       mb={4}
+      padding="10px!important"
     >
       <Grid templateColumns={{ base: '2fr 2fr', md: '2fr 3fr' }} w="100%">
         <Text color="grey">{timestamp}</Text>
