@@ -237,7 +237,7 @@ export const parseValue = (num, dec) => {
 
 // ETH/ERC20 Default Limits
 export const defaultMinPerTx = (isxDai, decimals) => {
-  let minPerTx = BigNumber.from(10).pow(isxDai ? decimals - 2 : decimals - 3);
+  let minPerTx = BigNumber.from(10).pow(isxDai ? decimals : decimals - 3);
   if (minPerTx.lt(1)) {
     minPerTx = BigNumber.from(1);
   }
