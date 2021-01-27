@@ -36,10 +36,17 @@ export const ErrorModal = ({ message, isOpen, onClose }) => {
             >
               <ErrorIcon size={20} mr={4} color="red.500" />
               <Flex flex={1} direction="column">
-                <Text fontWeight="bold" fontSize="xl" width="100%">
+                <Text
+                  fontWeight="bold"
+                  fontSize="xl"
+                  width="100%"
+                  color="white"
+                >
                   Error
                 </Text>
-                <Text width="100%">{message || ''}</Text>
+                <Text width="100%" color="grey">
+                  {message || ''}
+                </Text>
               </Flex>
             </Flex>
           </ModalBody>
