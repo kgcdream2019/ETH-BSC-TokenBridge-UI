@@ -100,7 +100,7 @@ export const LoadingModal = ({ loadingProps }) => {
                   direction="column"
                   align={{ base: 'stretch', md: 'center' }}
                 >
-                  <Text width="100%">
+                  <Text width="100%" color="rgb(230,232,234)">
                     {`${loadingText || 'Waiting for Block Confirmations'}...`}
                   </Text>
                   <Text width="100%" color="grey">
