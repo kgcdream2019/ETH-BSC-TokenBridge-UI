@@ -126,6 +126,7 @@ export const CustomTokenModal = ({ isOwner, isOpen, onClose, onBack }) => {
                   value={addressInput}
                   ref={initialRef}
                   isInvalid={addressInvalid}
+                  color="rgb(230,232,236)"
                 />
               </InputGroup>
               <Text mb={2} color="rgb(230,232,236)">
@@ -139,6 +140,7 @@ export const CustomTokenModal = ({ isOwner, isOpen, onClose, onBack }) => {
                   onChange={handleChange}
                   _placeholder={{ color: 'grey' }}
                   value={customToken.symbol}
+                  color="rgb(230,232,236)"
                 />
               </InputGroup>
               <Text mb={2} color="rgb(230,232,236)">
@@ -152,6 +154,7 @@ export const CustomTokenModal = ({ isOwner, isOpen, onClose, onBack }) => {
                   onChange={handleChange}
                   _placeholder={{ color: 'grey' }}
                   value={customToken.decimals}
+                  color="rgb(230,232,236)"
                 />
               </InputGroup>
             </Flex>
