@@ -72,7 +72,7 @@ export const LoadingModal = ({ loadingProps }) => {
                   mr={4}
                   position="relative"
                 >
-                  <Text>{`${
+                  <Text color="white">{`${
                     receipt.confirmations < totalConfirms
                       ? receipt.confirmations
                       : totalConfirms
