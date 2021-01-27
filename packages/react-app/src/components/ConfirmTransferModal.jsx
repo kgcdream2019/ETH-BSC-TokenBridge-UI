@@ -55,7 +55,7 @@ export const ConfirmTransferModal = ({ isOpen, onClose }) => {
         >
           <ModalHeader p={6}>
             {/* {isERC20Dai && <DaiWarning />} */}
-            <Text>Confirm Transfer</Text>
+            <Text color="rgb(230,232,234)">Confirm Transfer</Text>
           </ModalHeader>
           <ModalCloseButton
             size="lg"
@@ -76,10 +76,14 @@ export const ConfirmTransferModal = ({ isOpen, onClose }) => {
                 h="4rem"
                 px={4}
               >
-                <Text textAlign="center" fontWeight="bold">
+                <Text
+                  textAlign="center"
+                  fontWeight="bold"
+                  color="rgb(230,232,234)"
+                >
                   {fromAmt}
                 </Text>
-                <Text textAlign="center" fontSize="sm">
+                <Text textAlign="center" fontSize="sm" color="rgb(230,232,234)">
                   {fromUnit}
                 </Text>
               </Flex>
@@ -117,15 +121,25 @@ export const ConfirmTransferModal = ({ isOpen, onClose }) => {
                 h="4rem"
                 px={4}
               >
-                <Text textAlign="center" fontWeight="bold">
+                <Text
+                  textAlign="center"
+                  fontWeight="bold"
+                  color="rgb(230,232,234)"
+                >
                   {toAmt}
                 </Text>
-                <Text textAlign="center" fontSize="sm">
+                <Text textAlign="center" fontSize="sm" color="rgb(230,232,234)">
                   {toUnit}
                 </Text>
               </Flex>
             </Flex>
-            <Flex align="center" fontSize="sm" justify="center" mt={4}>
+            <Flex
+              align="center"
+              fontSize="sm"
+              justify="center"
+              mt={4}
+              color="rgb(230,232,234)"
+            >
               {`Bridge Fees ${Number(fee.toFixed(3))}%`}
             </Flex>
             <Divider color="#DAE3F0" my={4} />
