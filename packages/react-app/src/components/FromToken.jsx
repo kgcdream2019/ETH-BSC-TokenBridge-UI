@@ -161,7 +161,7 @@ export const FromToken = () => {
               size="sm"
               fontSize="sm"
               fontWeight="normal"
-              _hover={{ bg: 'blue.100' }}
+              _hover={{ bg: 'rgb(30,34,36)' }}
               onClick={() => {
                 setInput(formatValue(balance, token.decimals));
                 setAmount(balance);
