@@ -75,9 +75,14 @@ export const BridgeProvider = ({ children }) => {
         maxPerTx: defaultMaxPerTx(token.decimals),
         dailyLimit: defaultDailyLimit(token.decimals),
       });
+      console.log(
+        '===limits1 = ',
+        defaultMinPerTx(isxDaiChain(token.chainId), token.decimals).toString(),
+      );
       if (providerNetwork && token.chainId === providerNetwork.chainId) {
         fetchTokenLimits(token, ethersProvider).then(limits => {
           setTokenLimits(limits);
+          console.log('===limits2 = ', limits.minPerTx.toString());
         });
       }
       setAmountInput('');
