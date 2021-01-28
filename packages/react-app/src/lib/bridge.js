@@ -58,14 +58,14 @@ export const fetchToAmount = async (fromToken, toToken, fromAmount) => {
       ? await mediatorContract.FOREIGN_TO_HOME_FEE()
       : await mediatorContract.HOME_TO_FOREIGN_FEE();
     const minPerTx = await mediatorContract.minPerTx(tokenAddress);
-    console.log('minpertx = ', minPerTx.toString());
-    console.log('isXDai = ', isxDai);
+    // console.log('minpertx = ', minPerTx.toString());
+    // console.log('isXDai = ', isxDai);
     const fee = await mediatorContract.calculateFee(
       feeType,
       tokenAddress,
       isxDai ? fromAmount : minPerTx,
     );
-    console.log('fee = ', fee.toString());
+    // console.log('fee = ', fee.toString());
     return window.BigInt(fromAmount) - window.BigInt(fee);
   } catch (error) {
     // eslint-disable-next-line
