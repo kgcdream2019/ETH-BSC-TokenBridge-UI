@@ -55,15 +55,16 @@ export const TokenSelectorModal = ({ isOwner, isOpen, onClose, onCustom }) => {
   }, [tokenList, setFilteredTokenList]);
 
   useEffect(() => {
-    let localTokenList = window.localStorage.getItem('customTokens');
-    if (!localTokenList) {
-      localTokenList = [];
-    }
-    if (localTokenList.length < 1) {
-      localTokenList = [];
-    } else {
-      localTokenList = JSON.parse(localTokenList);
-    }
+    // let localTokenList = window.localStorage.getItem('customTokens');
+    // if (!localTokenList) {
+    //   localTokenList = [];
+    // }
+    // if (localTokenList.length < 1) {
+    //   localTokenList = [];
+    // } else {
+    //   localTokenList = JSON.parse(localTokenList);
+    // }
+    const localTokenList = [];
     setDefaultTokenList(network.value, localTokenList);
   }, [network, setDefaultTokenList]);
 
