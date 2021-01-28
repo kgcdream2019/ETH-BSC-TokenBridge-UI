@@ -49,6 +49,7 @@ export const fetchToAmount = async (fromToken, toToken, fromAmount) => {
     'function FOREIGN_TO_HOME_FEE() view returns (uint256)',
     'function HOME_TO_FOREIGN_FEE() view returns (uint256)',
     'function calculateFee(bytes32, address, uint256) view returns (uint256)',
+    'function minPerTx(address) view returns (uint256)',
   ];
   const mediatorContract = new Contract(mediatorAddress, abi, ethersProvider);
 
@@ -56,11 +57,15 @@ export const fetchToAmount = async (fromToken, toToken, fromAmount) => {
     const feeType = isxDai
       ? await mediatorContract.FOREIGN_TO_HOME_FEE()
       : await mediatorContract.HOME_TO_FOREIGN_FEE();
+    const minPerTx = await mediatorContract.minPerTx(tokenAddress);
+    console.log('minpertx = ', minPerTx.toString());
+    console.log('isXDai = ', isxDai);
     const fee = await mediatorContract.calculateFee(
       feeType,
       tokenAddress,
-      fromAmount,
+      isxDai ? fromAmount : minPerTx,
     );
+    console.log('fee = ', fee.toString());
     return window.BigInt(fromAmount) - window.BigInt(fee);
   } catch (error) {
     // eslint-disable-next-line
