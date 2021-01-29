@@ -7,7 +7,11 @@ import { InitModal } from '../components/InitModal';
 export const Home = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   useEffect(() => {
-    onOpen();
+    const init = window.sessionStorage.getItem('initStart');
+    if (!init) {
+      onOpen();
+      window.sessionStorage.setItem('initStart', true);
+    }
   }, [onOpen]);
   return (
     <>
