@@ -63,6 +63,33 @@ export const Web3Provider = ({ children }) => {
     }
   }, [chosenNetwork, providerNetwork]);
 
+  useEffect(() => {
+    const { ethereum } = window;
+
+    if (ethereum && ethereum.on /* && !active && !error && !suppress */) {
+      const handleChainChanged = () => {
+        window.location.reload();
+      };
+
+      const handleAccountsChanged = accounts => {
+        if (accounts.length > 0) {
+          window.location.reload();
+        }
+      };
+
+      ethereum.on('chainChanged', handleChainChanged);
+      ethereum.on('accountsChanged', handleAccountsChanged);
+
+      // return () => {
+      //   if (ethereum.removeListener) {
+      //     ethereum.removeListener('chainChanged', handleChainChanged)
+      //     ethereum.removeListener('accountsChanged', handleAccountsChanged)
+      //   }
+      // }
+    }
+    // return
+  }, []);
+
   const disconnect = useCallback(async () => {
     web3Modal.clearCachedProvider();
     setAccount();
