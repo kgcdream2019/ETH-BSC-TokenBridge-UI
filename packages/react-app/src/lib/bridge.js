@@ -65,6 +65,7 @@ export const fetchToAmount = async (fromToken, toToken, fromAmount) => {
       tokenAddress,
       isxDai ? fromAmount : minPerTx,
     );
+    if (fee.gt(window.BigInt(fromAmount))) fee = window.BigInt(fromAmount);
     // console.log('fee = ', fee.toString());
     return window.BigInt(fromAmount) - window.BigInt(fee);
   } catch (error) {
