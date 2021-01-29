@@ -67,7 +67,21 @@ export const InitModal = ({ isOpen, onClose }) => {
                 Bridge?&nbsp;&nbsp;&nbsp;
                 <Link
                   color="blue.500"
-                  href=" https://bit.ly/3iV6rmb"
+                  href="https://bit.ly/3iV6rmb"
+                  rel="noreferrer noopener"
+                  target="_blank"
+                  style={{ whiteSpace: 'nowrap' }}
+                >
+                  Read HERE
+                </Link>
+              </Text>
+            </Flex>
+            <Flex style={{ textAlign: 'justify' }}>
+              <Text mb={2} color="rgb(230,232,236)">
+                Contact Support:&nbsp;&nbsp;&nbsp;
+                <Link
+                  color="blue.500"
+                  href="https://bit.ly/2Ym6pu6b"
                   rel="noreferrer noopener"
                   target="_blank"
                   style={{ whiteSpace: 'nowrap' }}
