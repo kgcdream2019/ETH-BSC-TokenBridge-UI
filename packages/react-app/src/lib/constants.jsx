@@ -151,7 +151,7 @@ export const defaultTokens = {
   },
   56: {
     name: '1INCH on BSC',
-    address: '0xE5C355b6eD8996885abA7e9526A3733042abCd8F',
+    address: '0xf093a43f13Ae5E9b060240bA564f35d6BA5d3A39',
     symbol: '1INCH',
     decimals: 18,
     chainId: 56,
