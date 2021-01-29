@@ -25,18 +25,29 @@ export const ConfirmTransferModal = ({ isOpen, onClose }) => {
     BridgeContext,
   );
   const [fee, setFee] = useState(0);
-  useEffect(() => {
-    setFee(
-      ((Number(fromAmount) - Number(toAmount)) * 100) / Number(fromAmount),
-    );
-  }, [fromAmount, toAmount]);
+
   const isxDai = isxDaiChain(fromToken.chainId);
   const fromAmt = formatValue(fromAmount, fromToken.decimals);
   const fromUnit = fromToken.symbol + (isxDai ? ' on BSC' : '');
   const toAmt = formatValue(toAmount, toToken.decimals);
   const toUnit = toToken.symbol + (isxDai ? '' : ' on BSC');
   // const isERC20Dai = isERC20DaiAddress(fromToken);
-
+  useEffect(() => {
+    setFee(
+      isxDai
+        ? `${Number(
+            formatValue(
+              Number(fromAmount) - Number(toAmount),
+              toToken.decimals,
+            ),
+          ).toFixed(2) 
+            } ${ 
+            toToken.symbol}`
+        : `${((Number(fromAmount) - Number(toAmount)) * 100) /
+            Number(fromAmount).toFixed(2) 
+            }%`,
+    );
+  }, [fromAmount, toAmount]);
   const onClick = () => {
     transfer();
     onClose();
@@ -140,7 +151,7 @@ export const ConfirmTransferModal = ({ isOpen, onClose }) => {
               mt={4}
               color="rgb(230,232,234)"
             >
-              {`Bridge Fees ${Number(fee.toFixed(3))}%`}
+              {`Bridge Fees ${fee}`}
             </Flex>
             <Divider color="#DAE3F0" my={4} />
             <Flex w="100%" fontSize="sm" color="grey" align="center">
