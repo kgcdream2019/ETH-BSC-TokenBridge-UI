@@ -60,13 +60,13 @@ export const fetchToAmount = async (fromToken, toToken, fromAmount) => {
     const minPerTx = await mediatorContract.minPerTx(tokenAddress);
     // console.log('minpertx = ', minPerTx.toString());
     // console.log('isXDai = ', isxDai);
-    const fee = await mediatorContract.calculateFee(
+    let fee = await mediatorContract.calculateFee(
       feeType,
       tokenAddress,
       isxDai ? fromAmount : minPerTx,
     );
-    if (fee.gt(window.BigInt(fromAmount))) fee = window.BigInt(fromAmount);
-    // console.log('fee = ', fee.toString());
+    if (window.BigInt(fee) > window.BigInt(fromAmount)) fee = fromAmount;
+    console.log('fee = ', fee.toString());
     return window.BigInt(fromAmount) - window.BigInt(fee);
   } catch (error) {
     // eslint-disable-next-line
