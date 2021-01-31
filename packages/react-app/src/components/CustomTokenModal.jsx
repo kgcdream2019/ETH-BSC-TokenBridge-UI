@@ -41,7 +41,7 @@ export const CustomTokenModal = ({ isOwner, isOpen, onClose, onBack }) => {
   };
 
   const addCustomToken = () => {
-    let localTokensList = window.localStorage.getItem('customTokens2');
+    let localTokensList = window.localStorage.getItem('customTokens3');
     let customTokensList = [];
 
     if (!localTokensList) {
@@ -55,7 +55,7 @@ export const CustomTokenModal = ({ isOwner, isOpen, onClose, onBack }) => {
     }
     customTokensList = uniqueTokens(customTokensList);
     window.localStorage.setItem(
-      'customTokens2',
+      'customTokens3',
       JSON.stringify(customTokensList),
     );
     setToken(customToken);
