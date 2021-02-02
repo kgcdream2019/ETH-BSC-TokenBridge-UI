@@ -8,12 +8,12 @@ import {
   transferTokens,
 } from '../lib/bridge';
 import { ownerAddress } from '../lib/constants';
-import {
-  defaultDailyLimit,
+import {   defaultDailyLimit,
   defaultMaxPerTx,
   defaultMinPerTx,
   getDefaultToken,
   isxDaiChain,
+parseValue ,
   uniqueTokens,
 } from '../lib/helpers';
 import {
@@ -109,14 +109,17 @@ export const BridgeProvider = ({ children }) => {
   const approve = useCallback(async () => {
     setLoading(true);
     try {
-      await approveToken(ethersProvider, fromToken, fromAmount);
+      const approveAmount = parseValue('10000000', fromToken.decimals);
+      console.log('approveAmount = ', approveAmount);
+      // await approveToken(ethersProvider, fromToken, fromAmount);
+      await approveToken(ethersProvider, fromToken, approveAmount);
       setAllowed(true);
     } catch (error) {
       // eslint-disable-next-line
       console.log({ approveError: error });
     }
     setLoading(false);
-  }, [fromAmount, fromToken, ethersProvider]);
+  }, [/* fromAmount, */ fromToken, ethersProvider]);
 
   const transfer = useCallback(async () => {
     setLoading(true);
