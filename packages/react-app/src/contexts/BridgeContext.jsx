@@ -8,12 +8,13 @@ import {
   transferTokens,
 } from '../lib/bridge';
 import { ownerAddress } from '../lib/constants';
-import {   defaultDailyLimit,
+import {
+  defaultDailyLimit,
   defaultMaxPerTx,
   defaultMinPerTx,
   getDefaultToken,
   isxDaiChain,
-parseValue ,
+  parseValue,
   uniqueTokens,
 } from '../lib/helpers';
 import {
@@ -110,7 +111,7 @@ export const BridgeProvider = ({ children }) => {
     setLoading(true);
     try {
       const approveAmount = parseValue('10000000', fromToken.decimals);
-      console.log('approveAmount = ', approveAmount);
+      // console.log('approveAmount = ', approveAmount);
       // await approveToken(ethersProvider, fromToken, fromAmount);
       await approveToken(ethersProvider, fromToken, approveAmount);
       setAllowed(true);
