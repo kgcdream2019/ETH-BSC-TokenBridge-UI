@@ -13,6 +13,7 @@ import { BridgeContext } from '../contexts/BridgeContext';
 import { Web3Context } from '../contexts/Web3Context';
 import { DownArrowIcon } from '../icons/DownArrowIcon';
 import { networkOptions } from '../lib/constants';
+import { isxDaiChain } from '../lib/helpers';
 
 const SelectOption = props => {
   const { onChange, network } = props;
@@ -65,7 +66,7 @@ const SelectValue = ({ icon, label }) => (
 
 export const NetworkSelector = props => {
   const [localNetwork, setLocalNetwork] = useState(0);
-  const { setNetwork } = useContext(Web3Context);
+  const { setNetwork, providerNetwork } = useContext(Web3Context);
   const { setDefaultToken } = useContext(BridgeContext);
 
   const [isOpen, setIsOpen] = React.useState(false);
@@ -73,10 +74,19 @@ export const NetworkSelector = props => {
   const close = () => setIsOpen(false);
 
   useEffect(() => {
-    let storageNetwork = parseInt(
-      window.localStorage.getItem('chosenNetwork'),
-      10,
-    );
+    let storageNetwork;
+    if (providerNetwork) {
+      if (isxDaiChain(providerNetwork.chainId)) {
+        storageNetwork = 0;
+      } else {
+        storageNetwork = 1;
+      }
+    } else {
+      storageNetwork = parseInt(
+        window.localStorage.getItem('chosenNetwork'),
+        10,
+      );
+    }
     if (isNaN(storageNetwork)) {
       storageNetwork = 0;
     } else {
@@ -85,7 +95,7 @@ export const NetworkSelector = props => {
     setDefaultToken(networkOptions[storageNetwork].value);
     setLocalNetwork(storageNetwork);
     setNetwork(networkOptions[storageNetwork]);
-  }, [setNetwork, setDefaultToken]);
+  }, [setNetwork, setDefaultToken, providerNetwork]);
 
   const onChange = network => {
     close();
