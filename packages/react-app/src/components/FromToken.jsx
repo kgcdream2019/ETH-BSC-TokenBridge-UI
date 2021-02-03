@@ -12,7 +12,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import DropDown from '../assets/drop-down.svg';
 import { BridgeContext } from '../contexts/BridgeContext';
 import { Web3Context } from '../contexts/Web3Context';
-import { ownerAddress } from '../lib/constants';
+import { networkOptions,ownerAddress  } from '../lib/constants';
 import { formatValue, parseValue } from '../lib/helpers';
 import { fetchTokenBalanceWithProvider } from '../lib/token';
 import { ErrorModal } from './ErrorModal';
@@ -52,7 +52,10 @@ export const FromToken = () => {
 
   useEffect(() => {
     setIsOwner(account === ownerAddress);
-
+    const storageNetwork = parseInt(
+      window.localStorage.getItem('chosenNetwork'),
+      10,
+    );
     if (!account) {
       setBalance();
     }
@@ -60,8 +63,10 @@ export const FromToken = () => {
       token &&
       account &&
       providerNetwork &&
-      providerNetwork.chainId === token.chainId
+      providerNetwork.chainId === token.chainId &&
+      token.chainId == networkOptions[storageNetwork].value
     ) {
+      console.log('FromToken ####', token);
       setBalance();
       fetchTokenBalanceWithProvider(ethersProvider, token, account).then(b =>
         setBalance(b),

@@ -100,8 +100,8 @@ export const BridgeProvider = ({ children }) => {
 
   const setDefaultToken = useCallback(
     chainId => {
-      setFromToken();
-      setToToken();
+      // setFromToken();
+      // setToToken();
       setToken(getDefaultToken(chainId));
     },
     [setToken],
@@ -143,7 +143,7 @@ export const BridgeProvider = ({ children }) => {
 
   useEffect(() => {
     setIsOwner(account === ownerAddress);
-    console.log('is owner', account, ownerAddress);
+    // console.log('is owner', account, ownerAddress);
     const subscriptions = [];
     const unsubscribe = () => {
       subscriptions.forEach(s => {

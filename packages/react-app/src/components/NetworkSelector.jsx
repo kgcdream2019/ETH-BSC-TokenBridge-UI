@@ -81,25 +81,33 @@ export const NetworkSelector = props => {
       } else {
         storageNetwork = 1;
       }
+      window.localStorage.setItem('chosenNetwork', storageNetwork);
     } else {
       storageNetwork = parseInt(
         window.localStorage.getItem('chosenNetwork'),
         10,
       );
+
+      if (isNaN(storageNetwork)) {
+        storageNetwork = 0;
+      } else {
+        storageNetwork %= networkOptions.length;
+      }
     }
-    if (isNaN(storageNetwork)) {
-      storageNetwork = 0;
-    } else {
-      storageNetwork %= networkOptions.length;
-    }
+    console.log(
+      '++++++++++++++++++++ setDefault token = ',
+      storageNetwork,
+      networkOptions[storageNetwork].value,
+    );
     setDefaultToken(networkOptions[storageNetwork].value);
-    setLocalNetwork(storageNetwork);
     setNetwork(networkOptions[storageNetwork]);
-  }, [setNetwork, setDefaultToken, providerNetwork]);
+    setLocalNetwork(networkOptions[storageNetwork].key);
+  }, [setNetwork, setDefaultToken, providerNetwork, localNetwork]);
 
   const onChange = network => {
     close();
     setDefaultToken(network.value);
+    console.log('------------------ setDefault token = ', network.value);
     setNetwork(network);
     setLocalNetwork(network.key);
     window.localStorage.setItem('chosenNetwork', network.key);

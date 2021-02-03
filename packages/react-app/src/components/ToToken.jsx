@@ -3,6 +3,7 @@ import React, { useContext, useEffect } from 'react';
 
 import { BridgeContext } from '../contexts/BridgeContext';
 import { Web3Context } from '../contexts/Web3Context';
+import { networkOptions } from '../lib/constants';
 import { formatValue } from '../lib/helpers';
 import { fetchTokenBalance } from '../lib/token';
 import { Logo } from './Logo';
@@ -10,21 +11,41 @@ import { Logo } from './Logo';
 export const ToToken = () => {
   const { account } = useContext(Web3Context);
   const {
-    toToken: token,
+    toToken,
     toAmount: amount,
     toBalance: balance,
-    setToBalance: setBalance,
+    setToBalance,
   } = useContext(BridgeContext);
   const smallScreen = useBreakpointValue({ base: true, lg: false });
+
   useEffect(() => {
+    console.log('========= token == ', toToken);
+    const storageNetwork = parseInt(
+      window.localStorage.getItem('chosenNetwork'),
+      10,
+    );
     if (!account) {
-      setBalance();
+      setToBalance();
     }
-    if (token && account) {
-      setBalance();
-      fetchTokenBalance(token, account).then(b => setBalance(b));
+    console.log(
+      '============= toToken == ',
+      toToken,
+      '   networkOptions = ',
+      networkOptions,
+    );
+    if (
+      toToken &&
+      account &&
+      toToken.chainId != networkOptions[storageNetwork].value
+    ) {
+      // setToBalance();
+      fetchTokenBalance(toToken, account).then(b => {
+        setToBalance(b);
+        console.log('--------- balance: ', toToken.name, b, account);
+      });
     }
-  }, [token, account, setBalance]);
+  }, [toToken, account, setToBalance]);
+
   return (
     <Flex
       align="center"
@@ -44,7 +65,7 @@ export const ToToken = () => {
           />
         </svg>
       )}
-      {token && (
+      {toToken && (
         <Flex
           position={{ base: 'relative', lg: 'absolute' }}
           h={{ base: 'auto', lg: '100%' }}
@@ -72,21 +93,21 @@ export const ToToken = () => {
                 borderRadius="50%"
                 mr={2}
               >
-                <Logo uri={token.logoURI} reverseFallback />
+                <Logo uri={toToken.logoURI} reverseFallback />
               </Flex>
               <Text fontSize="lg" fontWeight="bold" color="rgb(230, 232, 236)">
-                {token.name}
+                {toToken.name}
               </Text>
             </Flex>
             {balance >= 0 && (
               <Text color="grey" mt={{ base: 2, lg: 0 }}>
-                {`Balance: ${formatValue(balance, token.decimals)}`}
+                {`Balance: ${formatValue(balance, toToken.decimals)}`}
               </Text>
             )}
           </Flex>
           <Flex align="flex-end" flex={1}>
             <Text fontWeight="bold" fontSize="2xl" color="rgb(230, 232, 236)">
-              {formatValue(amount, token.decimals)}
+              {formatValue(amount, toToken.decimals)}
             </Text>
           </Flex>
         </Flex>

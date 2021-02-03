@@ -6,6 +6,7 @@ import Web3Modal from 'web3modal';
 
 import { CONFIG } from '../config';
 import { networkOptions } from '../lib/constants';
+// import { useHistory } from 'react-router-dom';
 
 export const Web3Context = React.createContext({});
 
@@ -29,6 +30,7 @@ export const Web3Provider = ({ children }) => {
   const [ethersProvider, setEthersProvider] = useState();
   const [account, setAccount] = useState();
   const [networkMismatch, setNetworkMismatch] = useState(false);
+  // const history = useHistory();
 
   const connectWeb3 = useCallback(async () => {
     try {
@@ -68,11 +70,13 @@ export const Web3Provider = ({ children }) => {
 
     if (ethereum && ethereum.on /* && !active && !error && !suppress */) {
       const handleChainChanged = () => {
+        // history.push('/');
         window.location.reload();
       };
 
       const handleAccountsChanged = accounts => {
         if (accounts.length > 0) {
+          // history.push('/');
           window.location.reload();
         }
       };
