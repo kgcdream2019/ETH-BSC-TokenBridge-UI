@@ -38,7 +38,7 @@ export function handleNewToken(event: NewTokenRegistered): void {
 
   let tokenObject = fetchTokenInfo(homeToken);
   token.homeName = tokenObject.name;
-  token.foreignName = tokenObject.name.slice(0, -8);
+  token.foreignName = tokenObject.name.slice(0, -7);
   token.symbol = tokenObject.symbol;
   token.decimals = tokenObject.decimals;
 
