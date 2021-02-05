@@ -94,11 +94,11 @@ export const NetworkSelector = props => {
         storageNetwork %= networkOptions.length;
       }
     }
-    console.log(
-      '++++++++++++++++++++ setDefault token = ',
-      storageNetwork,
-      networkOptions[storageNetwork].value,
-    );
+    // console.log(
+    //   '++++++++++++++++++++ setDefault token = ',
+    //   storageNetwork,
+    //   networkOptions[storageNetwork].value,
+    // );
     setDefaultToken(networkOptions[storageNetwork].value);
     setNetwork(networkOptions[storageNetwork]);
     setLocalNetwork(networkOptions[storageNetwork].key);

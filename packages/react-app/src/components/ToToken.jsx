@@ -19,7 +19,7 @@ export const ToToken = () => {
   const smallScreen = useBreakpointValue({ base: true, lg: false });
 
   useEffect(() => {
-    console.log('========= token == ', toToken);
+    // console.log('========= token == ', toToken);
     const storageNetwork = parseInt(
       window.localStorage.getItem('chosenNetwork'),
       10,
@@ -27,12 +27,12 @@ export const ToToken = () => {
     if (!account) {
       setToBalance();
     }
-    console.log(
-      '============= toToken == ',
-      toToken,
-      '   networkOptions = ',
-      networkOptions,
-    );
+    // console.log(
+    //   '============= toToken == ',
+    //   toToken,
+    //   '   networkOptions = ',
+    //   networkOptions,
+    // );
     if (
       toToken &&
       account &&
@@ -41,7 +41,7 @@ export const ToToken = () => {
       // setToBalance();
       fetchTokenBalance(toToken, account).then(b => {
         setToBalance(b);
-        console.log('--------- balance: ', toToken.name, b, account);
+        // console.log('--------- balance: ', toToken.name, b, account);
       });
     }
   }, [toToken, account, setToBalance]);

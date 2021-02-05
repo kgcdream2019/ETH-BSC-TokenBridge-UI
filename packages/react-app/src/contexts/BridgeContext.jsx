@@ -176,6 +176,7 @@ export const BridgeProvider = ({ children }) => {
           setTxHash();
           setReceipt();
           await setToken(fromToken);
+          // console.log("===formToken = ", fromToken);
           fetchTokenBalanceWithProvider(
             ethersProvider,
             fromToken,
@@ -218,6 +219,7 @@ export const BridgeProvider = ({ children }) => {
       setLoading(true);
       try {
         const baseTokenList = await fetchTokenList(chainId);
+        // console.log("baseTokenList = ", baseTokenList);
         const customTokenList = uniqueTokens(
           baseTokenList.concat(
             customTokens.filter(token => token.chainId === chainId),
