@@ -55,7 +55,7 @@ export const TokenSelectorModal = ({ isOwner, isOpen, onClose, onCustom }) => {
   }, [tokenList, setFilteredTokenList]);
 
   useEffect(() => {
-    let localTokenList = window.localStorage.getItem('customTokens3');
+    let localTokenList = window.localStorage.getItem('customTokens4');
     if (!localTokenList) {
       localTokenList = [];
     }
