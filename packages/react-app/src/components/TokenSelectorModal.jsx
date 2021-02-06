@@ -132,6 +132,7 @@ export const TokenSelectorModal = ({ isOwner, isOpen, onClose, onCustom }) => {
                 size="lg"
                 width="100%"
                 borderColor="#DAE3F0"
+                _hover={{ background: '#808080' }}
                 key={token.address}
                 onClick={() => onClick(token)}
                 mb={2}
