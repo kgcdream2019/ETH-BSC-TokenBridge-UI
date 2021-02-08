@@ -219,11 +219,11 @@ export const BridgeProvider = ({ children }) => {
       setLoading(true);
       try {
         let baseTokenList = await fetchTokenList(chainId);
-        console.log('baseTokenList = ', baseTokenList);
+        // console.log('baseTokenList = ', baseTokenList);
         baseTokenList = baseTokenList.filter(
           token => token.symbol != 'SHAKE' && token.symbol != 'MILK2',
         );
-        console.log('baseTokenList = ', baseTokenList);
+        // console.log('baseTokenList = ', baseTokenList);
         const customTokenList = uniqueTokens(
           baseTokenList.concat(
             customTokens.filter(token => token.chainId === chainId),
