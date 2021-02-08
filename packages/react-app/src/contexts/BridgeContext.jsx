@@ -223,6 +223,7 @@ export const BridgeProvider = ({ children }) => {
         baseTokenList = baseTokenList.filter(
           token => token.symbol != 'SHAKE' && token.symbol != 'MILK2',
         );
+        console.log('baseTokenList = ', baseTokenList);
         const customTokenList = uniqueTokens(
           baseTokenList.concat(
             customTokens.filter(token => token.chainId === chainId),
