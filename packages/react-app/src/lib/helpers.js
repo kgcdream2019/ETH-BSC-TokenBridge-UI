@@ -38,6 +38,8 @@ export const isxDaiChain = chainId => {
       return false;
     case 56:
       return true;
+    case 86:
+      return true;
     case 77:
       return true;
     case 100:
@@ -53,6 +55,8 @@ export const getDefaultToken = chainId => {
     case 42:
       return defaultTokens[42];
     case 56:
+      return defaultTokens[56];
+    case 86:
       return defaultTokens[56];
     case 77:
       return defaultTokens[77];
@@ -73,6 +77,8 @@ export const getMediatorAddress = (tokenAddress, chainId) => {
       return mediators[42];
     case 56:
       return mediators[56];
+    case 86:
+      return mediators[86];
     case 77:
       return mediators[77];
     case 100:
@@ -88,6 +94,8 @@ export const getNetworkName = chainId => {
     case 42:
       return networkNames[42];
     case 56:
+      return networkNames[56];
+    case 86:
       return networkNames[56];
     case 77:
       return networkNames[77];
@@ -105,6 +113,8 @@ export const getAMBAddress = chainId => {
       return ambs[42];
     case 56:
       return ambs[56];
+    case 86:
+      return ambs[56];
     case 77:
       return ambs[77];
     case 100:
@@ -120,6 +130,8 @@ export const getGraphEndpoint = chainId => {
     case 42:
       return graphEndpoints[42];
     case 56:
+      return graphEndpoints[56];
+    case 86:
       return graphEndpoints[56];
     case 77:
       return graphEndpoints[77];
@@ -137,6 +149,8 @@ export const getRPCUrl = chainId => {
       return chainUrls[42].rpc;
     case 56:
       return chainUrls[56].rpc;
+    case 86:
+      return chainUrls[86].rpc;
     case 77:
       return chainUrls[77].rpc;
     case 100:
@@ -152,6 +166,8 @@ export const getExplorerUrl = chainId => {
     case 42:
       return chainUrls[42].explorer;
     case 56:
+      return chainUrls[56].explorer;
+    case 86:
       return chainUrls[56].explorer;
     case 77:
       return chainUrls[77].explorer;
@@ -170,6 +186,8 @@ export const getMonitorUrl = (chainId, hash) => {
     case 42:
       return `${testUrl}42/${hash}`;
     case 56:
+      return `https://bridgemonitor.justliquidity.org/56/${hash}`;
+    case 86:
       return `https://bridgemonitor.justliquidity.org/56/${hash}`;
     case 77:
       return `${testUrl}77/${hash}`;
@@ -201,6 +219,8 @@ export const getTokenListUrl = chainId => {
     case 42:
       return defaultTokensUrl[42];
     case 56:
+      return defaultTokensUrl[56];
+    case 86:
       return defaultTokensUrl[56];
     case 77:
       return defaultTokensUrl[77];

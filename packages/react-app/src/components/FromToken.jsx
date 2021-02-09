@@ -27,6 +27,8 @@ export const FromToken = () => {
     networkMismatch,
     account,
   } = useContext(Web3Context);
+  console.log('providerNetwork = ', providerNetwork);
+  console.log('networkMismatch = ', networkMismatch);
   const {
     fromToken: token,
     fromBalance: balance,
@@ -63,7 +65,8 @@ export const FromToken = () => {
       token &&
       account &&
       providerNetwork &&
-      providerNetwork.chainId === token.chainId &&
+      (providerNetwork.chainId === token.chainId ||
+        (providerNetwork.chainId == 86 && token.chainId == 56)) &&
       token.chainId == networkOptions[storageNetwork].value
     ) {
       // console.log('FromToken ####', token);

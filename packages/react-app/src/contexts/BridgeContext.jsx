@@ -80,7 +80,11 @@ export const BridgeProvider = ({ children }) => {
       //   '===limits1 = ',
       //   defaultMinPerTx(isxDaiChain(token.chainId), token.decimals).toString(),
       // );
-      if (providerNetwork && token.chainId === providerNetwork.chainId) {
+      if (
+        providerNetwork &&
+        (token.chainId === providerNetwork.chainId ||
+          (token.chainId == 56 && providerNetwork.chainId == 86))
+      ) {
         fetchTokenLimits(token, ethersProvider).then(limits => {
           setTokenLimits(limits);
           // console.log('===limits2 = ', limits.minPerTx.toString());
@@ -211,9 +215,9 @@ export const BridgeProvider = ({ children }) => {
   const setDefaultTokenList = useCallback(
     async (chainId, customTokens) => {
       if (!account || !ethersProvider) return;
-
-      const networkMismatch =
-        chainId !== (await ethersProvider.getNetwork()).chainId;
+      let detectedChainId = (await ethersProvider.getNetwork()).chainId;
+      if (detectedChainId == 86) detectedChainId = 56;
+      const networkMismatch = chainId !== detectedChainId;
       if (networkMismatch) return;
 
       setLoading(true);

@@ -40,9 +40,16 @@ export const Web3Provider = ({ children }) => {
       const provider = new ethers.providers.Web3Provider(
         web3Provider.currentProvider,
       );
-
       setEthersProvider(provider);
       const network = await provider.getNetwork();
+      console.log('network = ', network);
+      // bug fix for trustwallet
+      // if(network.chainId == 86)
+      // {
+      //   network.chainId = 56;
+      // }
+      // provider.network = network;
+
       setProviderNetwork(network);
       const signer = provider.getSigner();
       const gotAccount = await signer.getAddress();
@@ -57,7 +64,8 @@ export const Web3Provider = ({ children }) => {
     if (
       providerNetwork &&
       chosenNetwork &&
-      providerNetwork.chainId === chosenNetwork.value
+      (providerNetwork.chainId === chosenNetwork.value ||
+        (providerNetwork.chainId == 86 && chosenNetwork.value == 56))
     ) {
       setNetworkMismatch(false);
     } else {
