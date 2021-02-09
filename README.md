@@ -1,4 +1,4 @@
-# BSC MUltiToken Bridge
+# BSC MultiToken Bridge
 
 The multi-token extension for the Arbitrary Message Bridge between Ethereum and the binance smart chain is the simplest way to transfer ANY ERC20/ERC677/ERC827 token to the binance smart chain.
 
