@@ -121,6 +121,7 @@ export const TokenSelectorModal = ({ isOwner, isOpen, onClose, onCustom }) => {
                 onChange={onChange}
                 _placeholder={{ color: 'grey' }}
                 ref={initialRef}
+                color="rgb(230,232,236)"
               />
               <InputRightElement px={0}>
                 <Image src={SearchIcon} />
