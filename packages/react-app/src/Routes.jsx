@@ -7,8 +7,8 @@ import { Maintenance } from './pages/Maintenance';
 
 export const Routes = () => (
   <Switch>
-    <Route exact path="/" component={Maintenance} />
-    {/* <Route exact path="/" component={Home} /> */}
+    {/* <Route exact path="/" component={Maintenance} /> */}
+    <Route exact path="/" component={Home} />
     <Route path="/history" component={History} />
     <Redirect to="/" />
   </Switch>
