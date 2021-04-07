@@ -9,11 +9,19 @@ import {
   Text,
 } from '@chakra-ui/react';
 import React, { useContext } from 'react';
+import { Archive } from 'react-feather';
+import ReactLoading from 'react-loading';
+import styled from 'tachyons-components';
 
 import LoadingImage from '../assets/loading.svg';
 import { BridgeContext } from '../contexts/BridgeContext';
 import { getMonitorUrl } from '../lib/helpers';
 import { ProgressRing } from './ProgressRing';
+
+export const Article = styled('div')`
+w-25 ma2 h4 items-center justify-center flex flex-column flex-wrap`;
+export const Section = styled('div')`
+flex flex-wrap content-center justify-center w-100 h-100 bg-blue`;
 
 const getTransactionString = hash => {
   if (!hash) return 'here';
@@ -43,9 +51,10 @@ export const LoadingModal = ({ loadingProps }) => {
           <ModalContent background="none" boxShadow="none" borderRadius="0">
             <Flex direction="column" align="center" justify="center">
               <Image src={LoadingImage} mb={4} />
-              <Text color="white" fontWeight="bold">
+              {/* <Text color="white" fontWeight="bold">
                 Loading ...
-              </Text>
+              </Text> */}
+              <ReactLoading type="bars" color="#fff" />
             </Flex>
           </ModalContent>
         )}
