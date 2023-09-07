@@ -1,0 +1,142 @@
+{
+  "name": "Honeyswap Default",
+  "timestamp": "2023-06-11T06:56:16.071Z",
+  "version": {
+    "major": 6,
+    "minor": 0,
+    "patch": 3
+  },
+  "tags": {},
+  "logoURI": "https://ipfs.io/ipfs/bafybeihqunal3rxoz7bosmqxqobz2sz4nn62naufxqf2fyq35bepp4pkdy",
+  "keywords": ["honeyswap", "gnosis", "polygon", "zksync"],
+  "tokens": [
+    {
+      "name": "1INCH Token on BSC",
+      "address": "0xf093a43f13Ae5E9b060240bA564f35d6BA5d3A39",
+      "symbol": "1INCH",
+      "decimals": 18,
+      "chainId": 56,
+      "logoURI": "https://etherscan.io/token/images/1inch_32.png"
+    },
+    {
+      "name": "SushiToken on BSC",
+      "address": "0x4e218b97b7C96583d7d8543Ca00bcB2974f4e108",
+      "symbol": "SUSHI",
+      "decimals": 18,
+      "chainId": 56,
+      "logoURI": ""
+    },
+    {
+      "name": "Compound on BSC",
+      "address": "0xC77731D6B7Ea31735F60eDd451851D81f80b43fA",
+      "symbol": "COMP",
+      "decimals": 18,
+      "chainId": 56,
+      "logoURI": ""
+    },
+    {
+      "name": "Revain on BSC",
+      "address": "0x92948A7DAc3c24E6C3A9A949de8Ee3f6fBa8BCe5",
+      "symbol": "REV",
+      "decimals": 18,
+      "chainId": 56,
+      "logoURI": ""
+    },
+    {
+      "name": "Tether USD on BSC",
+      "address": "0x69bAb60997A2f5CbeE668E5087Dd9F91437206Bb",
+      "symbol": "USDT",
+      "decimals": 18,
+      "chainId": 56,
+      "logoURI": ""
+    },
+    {
+      "name": "Aave on BSC",
+      "address": "0xB3f788fA074B2535D4EC3cAB335D93cCF2Dd0F0c",
+      "symbol": "AAVE",
+      "decimals": 18,
+      "chainId": 56,
+      "logoURI": ""
+    },
+    {
+      "name": "Synthetix on BSC",
+      "address": "0x86D6AC2A827b1B8D37f1D6dEe615d274Cf5c9317",
+      "symbol": "SNX",
+      "decimals": 18,
+      "chainId": 56,
+      "logoURI": ""
+    },
+    {
+      "name": "YVS.Finance on BSC",
+      "address": "0x47c1C7B9D7941A7265D123DCfb100D8FB5348213",
+      "symbol": "YVS",
+      "decimals": 18,
+      "chainId": 56,
+      "logoURI": ""
+    },
+    {
+      "name": "SparkPoint on BSC",
+      "address": "0x3B1eC92288D78D421f97562f8D479e6fF7350a16",
+      "symbol": "SRK",
+      "decimals": 18,
+      "chainId": 56,
+      "logoURI": ""
+    },
+    {
+      "name": "Lead Token on BSC",
+      "address": "0x2ed9e96EDd11A1fF5163599A66fb6f1C77FA9C66",
+      "symbol": "LEAD",
+      "decimals": 18,
+      "chainId": 56,
+      "logoURI": ""
+    },
+    {
+      "name": "Quai Dao on BSC",
+      "address": "0x3Dc2d7434bDbB4Ca1A8A6bCC8a8075AEaE2d2179",
+      "symbol": "QUAI",
+      "decimals": 18,
+      "chainId": 56,
+      "logoURI": ""
+    },
+    {
+      "name": "Shopping.io",
+      "address": "0x78A18Db278F9c7c9657F61dA519e6Ef43794DD5D",
+      "symbol": "SPI",
+      "decimals": 18,
+      "chainId": 56,
+      "logoURI": ""
+    },
+    {
+      "name": "Giftedhands on BSC",
+      "address": "0xfDFD27aE39cebefDBaAc8615F18aa68DDD0F15f5",
+      "symbol": "GHD",
+      "decimals": 18,
+      "chainId": 56,
+      "logoURI": ""
+    },
+    {
+      "name": "Tatcoin on BSC",
+      "address": "0x290c665656a67e0ea0784f90ECBaeFF77c884217",
+      "symbol": "TAT",
+      "decimals": 18,
+      "chainId": 56,
+      "logoURI": ""
+    },
+    {
+      "name": "Previse on BSC",
+      "address": "0x8addc13d89BbCB19a37CCEb38020a947d664b0fb",
+      "symbol": "PRVS",
+      "decimals": 18,
+      "chainId": 56,
+      "logoURI": ""
+    },
+    {
+      "name": "Sad Cat Token on BSC",
+      "address": "0xF1b8A242157bFbB6397e7433Af1ed6e638E2D82d",
+      "symbol": "SCAT",
+      "decimals": 18,
+      "chainId": 56,
+      "logoURI": ""
+    }
+  ]
+}

@@ -11,6 +11,7 @@ import {
 } from './helpers';
 
 export const fetchTokenList = async chainId => {
+  console.log('=== fetchTokenList');
   const [defaultTokens, subgraphTokens] = await Promise.all([
     fetchDefaultTokens(chainId),
     fetchTokensFromSubgraph(chainId),

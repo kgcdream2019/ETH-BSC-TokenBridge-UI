@@ -1,0 +1,134 @@
+{
+  "name": "Honeyswap Default",
+  "timestamp": "2023-06-11T06:56:16.071Z",
+  "version": {
+    "major": 6,
+    "minor": 0,
+    "patch": 3
+  },
+  "tags": {},
+  "logoURI": "https://ipfs.io/ipfs/bafybeihqunal3rxoz7bosmqxqobz2sz4nn62naufxqf2fyq35bepp4pkdy",
+  "keywords": ["honeyswap", "gnosis", "polygon", "zksync"],
+  "tokens": [
+    {
+      "name": "1INCH Token",
+      "address": "0x111111111117dC0aa78b770fA6A738034120C302",
+      "symbol": "1INCH",
+      "decimals": 18,
+      "chainId": 1,
+      "logoURI": "https://etherscan.io/token/images/1inch_32.png"
+    },
+    {
+      "name": "SushiToken",
+      "address": "0x6B3595068778DD592e39A122f4f5a5cF09C90fE2",
+      "symbol": "SUSHI",
+      "decimals": 18,
+      "chainId": 1,
+      "logoURI": ""
+    },
+    {
+      "name": "Compound",
+      "address": "0xc00e94cb662c3520282e6f5717214004a7f26888",
+      "symbol": "COMP",
+      "decimals": 18,
+      "chainId": 1,
+      "logoURI": ""
+    },
+    {
+      "name": "Revain",
+      "address": "0x2ef52Ed7De8c5ce03a4eF0efbe9B7450F2D7Edc9",
+      "symbol": "REV",
+      "decimals": 6,
+      "chainId": 1,
+      "logoURI": ""
+    },
+    {
+      "name": "Aave",
+      "address": "0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9",
+      "symbol": "AAVE",
+      "decimals": 18,
+      "chainId": 1,
+      "logoURI": ""
+    },
+    {
+      "name": "Synthetix",
+      "address": "0xc011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f",
+      "symbol": "SNX",
+      "decimals": 18,
+      "chainId": 1,
+      "logoURI": ""
+    },
+    {
+      "name": "YVS.Finance",
+      "address": "0xec681f28f4561c2a9534799aa38e0d36a83cf478",
+      "symbol": "YVS",
+      "decimals": 18,
+      "chainId": 1,
+      "logoURI": ""
+    },
+    {
+      "name": "SparkPoint",
+      "address": "0x0488401c3F535193Fa8Df029d9fFe615A06E74E6",
+      "symbol": "SRK",
+      "decimals": 18,
+      "chainId": 1,
+      "logoURI": ""
+    },
+    {
+      "name": "Lead Token",
+      "address": "0x1dD80016e3d4ae146Ee2EBB484e8edD92dacC4ce",
+      "symbol": "LEAD",
+      "decimals": 18,
+      "chainId": 1,
+      "logoURI": ""
+    },
+    {
+      "name": "Quai Dao",
+      "address": "0x40821CD074dfeCb1524286923bC69315075b5c89",
+      "symbol": "QUAI",
+      "decimals": 18,
+      "chainId": 1,
+      "logoURI": ""
+    },
+    {
+      "name": "Shopping.io",
+      "address": "0x9b02dd390a603add5c07f9fd9175b7dabe8d63b7",
+      "symbol": "SPI",
+      "decimals": 18,
+      "chainId": 1,
+      "logoURI": ""
+    },
+    {
+      "name": "Giftedhands",
+      "address": "0x3b544e6fcf6C8dCE9D8B45A4FdF21C9B02f9fDa9",
+      "symbol": "GHD",
+      "decimals": 18,
+      "chainId": 1,
+      "logoURI": ""
+    },
+    {
+      "name": "Tatcoin",
+      "address": "0x505d0fFa350B2687eB8393AeBD14632F2990991a",
+      "symbol": "TAT",
+      "decimals": 18,
+      "chainId": 1,
+      "logoURI": ""
+    },
+    {
+      "name": "Previse",
+      "address": "0xA36e59c08c9F251a6b7A9EB6bE6e32fd6157AcD0",
+      "symbol": "PRVS",
+      "decimals": 18,
+      "chainId": 1,
+      "logoURI": ""
+    },
+    {
+      "name": "Sad Cat Token",
+      "address": "0x8424C5aC326834B404742de0067bCb654E86BE30",
+      "symbol": "SCAT",
+      "decimals": 18,
+      "chainId": 1,
+      "logoURI": ""
+    }
+  ]
+}
