@@ -24,6 +24,7 @@ export function handleNewToken(event: NewTokenRegistered): void {
 
   if (overrides.isSet(homeToken)) {
     let override = overrides.get(homeToken);
+    if (!override) return;
     log.info('Overriding homeToken {} with {} for foreignToken {}', [
       homeToken.toHex(),
       override.address.toHex(),
@@ -37,6 +38,7 @@ export function handleNewToken(event: NewTokenRegistered): void {
   token.foreignAddress = event.params.foreignToken;
 
   let tokenObject = fetchTokenInfo(homeToken);
+  if (!tokenObject) return;
   token.homeName = tokenObject.name;
   token.foreignName = tokenObject.name.slice(0, -7);
   token.symbol = tokenObject.symbol;

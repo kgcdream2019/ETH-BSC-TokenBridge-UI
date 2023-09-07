@@ -2,8 +2,8 @@
   "name": "@project/subgraph",
   "version": "1.0.0",
   "dependencies": {
-    "@graphprotocol/graph-cli": "0.18.0",
-    "@graphprotocol/graph-ts": "0.18.1"
+    "@graphprotocol/graph-cli": "^0.52.0",
+    "@graphprotocol/graph-ts": "^0.29.3"
   },
   "license": "MIT",
   "scripts": {
@@ -15,7 +15,7 @@
     "prepare-sokol": "mustache config/sokol.json subgraph.template.yaml > subgraph.yaml",
     "codegen": "graph codegen --output-dir src/types/",
     "build": "graph build",
-    "deploy-mainnet": "graph deploy dan13ram/mainnet-omnibridge --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/",
+    "deploy-mainnet": "graph deploy kgcdream2019/mainnet-omnibridge --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/",
     "deploy-xdai": "graph deploy dan13ram/xdai-omnibridge --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/",
     "deploy-kovan": "graph deploy dan13ram/kovan-omnibridge --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/",
     "deploy-sokol": "graph deploy dan13ram/sokol-omnibridge --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/",
@@ -25,6 +25,12 @@
     "deploy-local-bsc-mainnet": "graph deploy justliquidity/bsc-to-mainnet-julswap-bridge --debug --ipfs http://localhost:5001 --node http://127.0.0.1:8020"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
+    "eslint": "^6.2.2",
+    "eslint-config-prettier": "^6.1.0",
+    "prettier": "^1.18.2",
+    "typescript": "^3.5.2",
     "mustache": "^4.0.1"
   }
 }
