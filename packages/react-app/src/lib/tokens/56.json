@@ -16,7 +16,7 @@
       "symbol": "1INCH",
       "decimals": 18,
       "chainId": 56,
-      "logoURI": "https://etherscan.io/token/images/1inch_32.png"
+      "logoURI": ""
     },
     {
       "name": "SushiToken on BSC",

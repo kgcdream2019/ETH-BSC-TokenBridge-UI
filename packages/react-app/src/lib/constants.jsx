@@ -191,8 +191,8 @@ export const ambs = {
 // };
 export const defaultTokensUrl = {
   100: '',
-  1: '',
+  1: 'https://raw.githubusercontent.com/kgcdream2019/ETH-BSC-TokenBridge-UI/main/packages/react-app/src/lib/tokens/1.json',
   42: '',
   77: '',
-  56: '',
+  56: 'https://raw.githubusercontent.com/kgcdream2019/ETH-BSC-TokenBridge-UI/main/packages/react-app/src/lib/tokens/56.json',
 };

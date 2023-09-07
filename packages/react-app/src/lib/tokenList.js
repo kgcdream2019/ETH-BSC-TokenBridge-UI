@@ -28,9 +28,9 @@ export const fetchDefaultTokens = async chainId => {
     const response = await fetch(url);
     if (response.ok) {
       const json = await response.json();
-      if (tokenListValidator(json)) {
-        return json.tokens.filter(token => token.chainId === chainId);
-      }
+      // if (tokenListValidator(json)) {
+      return json.tokens.filter(token => token.chainId === chainId);
+      // }
     }
   }
   // eslint-disable-next-line

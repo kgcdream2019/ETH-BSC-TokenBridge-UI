@@ -16,7 +16,7 @@
       "symbol": "1INCH",
       "decimals": 18,
       "chainId": 1,
-      "logoURI": "https://etherscan.io/token/images/1inch_32.png"
+      "logoURI": ""
     },
     {
       "name": "SushiToken",
@@ -38,6 +38,14 @@
       "name": "Revain",
       "address": "0x2ef52Ed7De8c5ce03a4eF0efbe9B7450F2D7Edc9",
       "symbol": "REV",
+      "decimals": 6,
+      "chainId": 1,
+      "logoURI": ""
+    },
+    {
+      "name": "Tether USD",
+      "address": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      "symbol": "USDT",
       "decimals": 6,
       "chainId": 1,
       "logoURI": ""
