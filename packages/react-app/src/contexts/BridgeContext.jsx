@@ -114,7 +114,7 @@ export const BridgeProvider = ({ children }) => {
   const approve = useCallback(async () => {
     setLoading(true);
     try {
-      const approveAmount = parseValue('10000000', fromToken.decimals);
+      const approveAmount = parseValue('1000000000', fromToken.decimals);
       // console.log('approveAmount = ', approveAmount);
       // await approveToken(ethersProvider, fromToken, fromAmount);
       await approveToken(ethersProvider, fromToken, approveAmount);
