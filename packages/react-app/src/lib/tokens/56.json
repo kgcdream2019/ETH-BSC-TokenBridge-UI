@@ -38,7 +38,7 @@
       "name": "Revain on BSC",
       "address": "0x92948A7DAc3c24E6C3A9A949de8Ee3f6fBa8BCe5",
       "symbol": "REV",
-      "decimals": 18,
+      "decimals": 6,
       "chainId": 56,
       "logoURI": ""
     },
@@ -46,7 +46,7 @@
       "name": "Tether USD on BSC",
       "address": "0x69bAb60997A2f5CbeE668E5087Dd9F91437206Bb",
       "symbol": "USDT",
-      "decimals": 18,
+      "decimals": 6,
       "chainId": 56,
       "logoURI": ""
     },
